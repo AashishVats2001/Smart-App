@@ -18,7 +18,7 @@ const Form = () => {
         e.preventDefault();
         console.log('Form submitted:', form);
         // Optionally reset:
-        setForm({ name: '', email: '', message: '' });
+        setForm({ name: '', email: '', message: '', phone: '', wesbite: '' });
     };
 
     return (
@@ -46,13 +46,13 @@ const Form = () => {
                 />
 
                  <input
-                    type="number"
-                    name="number"
+                    type="phone"
+                    name="phone"
                     placeholder="Phone"
                     value={form.phone}
                     onChange={handleChange}
                     className="w-full border-b py-2 text-white placeholder:text-white placeholder:font-light"
-                    required
+                    // required
                 />
 
                  <input
@@ -62,7 +62,7 @@ const Form = () => {
                     value={form.website}
                     onChange={handleChange}
                     className="w-full border-b py-2 text-white placeholder:text-white placeholder:font-light"
-                    required
+                    // required
                 />
 
                 <textarea
