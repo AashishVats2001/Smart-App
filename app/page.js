@@ -9,12 +9,17 @@ import DesignLeftImage from "@/public/left-image1.png";
 import AccordionImage from "@/public/accordion-image.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMobile, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faLocation, faLocationPin, faMapLocationDot, faMobile, faMobileScreenButton, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faFigma, faGooglePay, faGooglePlay, faWindows } from "@fortawesome/free-brands-svg-icons";
 import MoreFeatures from "@/components/MoreFeatures";
 import HowItWorksCarousel from "@/components/HowItWorksCarousel";
 import FAQs from "@/components/FAQs";
 import TeamCards from "@/components/TeamCards";
+import Stats from "@/components/Stats";
+import Testimonials from "@/components/Testimonials";
+import PriceCards from "@/components/PriceCards";
+import BlogCards from "@/components/BlogCards";
+import Form from "@/components/Form";
 
 
 export default function Home() {
@@ -251,12 +256,199 @@ export default function Home() {
 
       </div>
 
+      {/* Statistics */}
+      <div id="stats" className="w-full flex items-center justify-center py-36 bg-brand-gradient">
+        <Stats />
+      </div>
+
+      {/* Testimonials */}
+
+      <div id="testimonials" className="w-full flex items-center justify-center bg-bg-accent py-20">
+        <div className="max-w-container w-full flex flex-col items-center justify-center gap-15">
+          <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+            Trusted by 1000+ clients
+            <div className="w-10 h-1 bg-primary " />
+          </h2>
+
+          <p className="w-1/2 text-center">Lorem Ipsum is simply dummy text of the printing and
+            typeseing industry Lorem Ipsum has been the industry's standard
+            dummy text Lorem is simply dummy text of the printing and
+          </p>
+
+          <Testimonials />
+        </div>
+      </div>
+
+
+      {/* Pricing */}
+      <div className="w-full flex flex-col items-center justify-center">
+        <div id="pricing" className="w-full flex items-center justify-center pt-36 pb-44 bg-brand-gradient">
+          <h2 className="text-5xl text-white flex flex-col gap-2 items-center leading-16">
+            Our Best Pricing
+            <div className="w-10 h-1 bg-white " />
+          </h2>
+        </div>
+
+        {/* Price Cards */}
+        <div className="max-w-container w-full -mb-20">
+
+          <PriceCards />
+        </div>
+      </div>
+
+      {/* Blogs */}
+      <div id="blogs" className="w-full flex items-center justify-center bg-bg-accent py-20">
+        <div className="max-w-container w-full flex flex-col items-center justify-center gap-15">
+          <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+            Latest Blogs
+            <div className="w-10 h-1 bg-primary " />
+          </h2>
+
+          <p className="w-1/2 text-center">Lorem Ipsum is simply dummy text of the printing and
+            typeseing industry Lorem Ipsum has been the industry's standard
+            dummy text Lorem is simply dummy text of the printing and
+          </p>
+
+
+          <BlogCards />
+        </div>
+
+      </div>
+
+
+      {/* Subscribe */}
+      <div id="subscribe" className="w-full flex items-center justify-center  pt-20">
+        <div className="max-w-container w-full flex flex-col items-center justify-center gap-15">
+          <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+            Subscribe
+            <div className="w-10 h-1 bg-primary " />
+          </h2>
+
+          <p className="w-1/2 text-center">Lorem Ipsum is simply dummy text of the printing and
+            typeseing industry Lorem Ipsum has been the industry's standard
+            dummy text Lorem is simply dummy text of the printing and
+          </p>
+
+
+          <div className="w-full flex bg-brand-gradient rounded-lg text-white">
+
+            {/* Contact Info */}
+            <div className="flex items-start justify-center pt-20 pb-10 px-16 w-2/5 border-r-[0.1px] border-gray-300">
+              <div className="flex flex-col gap-10 items-start">
+
+                <h3 className="text-2xl font-bold">Contact Info</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus orem Ipsum has been the industrys.</p>
+
+                {/* Call Us */}
+                <div className="flex items-start gap-4 text-white">
+                  <div className="pt-2.5 px-2.5 pb-1 rounded-full border-[0.5px] border-white">
+                    <FontAwesomeIcon icon={faPhone} className="w-5! h-5!" />
+                  </div>
+                  <div className="flex flex-col items-start font-medium">
+                    <h4 className="text-xl ">Call us</h4>
+                    <p className="text-sm">+91 123 456 7890</p>
+                  </div>
+                </div>
+
+                {/* Email Us */}
+                <div className="flex items-start gap-4 text-white">
+                  <div className="pt-2.5 px-2.5 pb-1 rounded-full border-[0.5px] border-white">
+                    <FontAwesomeIcon icon={faEnvelope} className="w-5! h-5!" />
+                  </div>
+                  <div className="flex flex-col items-start font-medium">
+                    <h4 className="text-xl">Email us</h4>
+                    <p className="text-sm">@support@gmail.com</p>
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div className="flex items-start gap-4 text-white">
+                  <div className="pt-2.5 px-2.5 pb-1 rounded-full border-[0.5px] border-white">
+                    <FontAwesomeIcon icon={faMapLocationDot} className="w-5! h-5!" />
+                  </div>
+                  <div className="flex flex-col items-start font-medium">
+                    <h4 className="text-xl">Location</h4>
+                    <p className="text-sm">125 Business Evenua, Huston USA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Form */}
+            <div className="flex items-start justify-center w-3/4 pt-20 pb-10 px-16">
+              <Form />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Footer */}
+      <div className="w-full flex items-center justify-center bg-dark relative pb-20 pt-40">
+        <div className="max-w-container w-full flex flex-col items-center justify-center gap-16 ">
+          <h2 className="text-5xl text-white flex flex-col gap-2 items-center">
+            Download Smart Now
+            <div className="w-10 h-1 bg-white mt-2" />
+          </h2>
+          <div className="flex justify-evenly w-3/4 gap-6">
+
+            {/* App Store */}
+            <div className='py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer relative'>
+              <FontAwesomeIcon icon={faMobileScreenButton} className='text-4xl' fixedWidth />
+              <div className="flex flex-col justify-around">
+                <p className="text-xs leading-tight">Available on the</p>
+                <p className="text-lg font-medium tex-nowrap">iOS App Store</p>
+              </div>
+              <div className='absolute py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer text-white inset-0 bg-brand-button-gradient opacity-0 shadow-2xl/50 hover:opacity-100 transition-all duration-300'>
+                <FontAwesomeIcon icon={faMobileScreenButton} className='text-4xl' fixedWidth />
+                <div className="flex flex-col justify-around">
+                  <p className="text-xs leading-tight">Available on the</p>
+                  <p className="text-lg font-medium tex-nowrap">iOS App Store</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Play Store */}
+            <div className='py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer relative'>
+              <FontAwesomeIcon icon={faGooglePlay} className='text-4xl' fixedWidth />
+              <div className="flex flex-col justify-around">
+                <p className="text-xs leading-tight">Available on the</p>
+                <p className="text-lg font-medium tex-nowrap">Play Store</p>
+              </div>
+              <div className='absolute py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer text-white inset-0 bg-brand-button-gradient opacity-0 shadow-2xl/50 hover:opacity-100 transition-all duration-300'>
+                <FontAwesomeIcon icon={faGooglePlay} className='text-4xl' fixedWidth />
+                <div className="flex flex-col justify-around">
+                  <p className="text-xs leading-tight">Available on the</p>
+                  <p className="text-lg font-medium tex-nowrap">Play Store</p>
+                </div>
+              </div>
+            </div>
+
+
+            {/* Windows Store */}
+            <div className='py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer relative'>
+              <FontAwesomeIcon icon={faWindows} className='text-4xl' fixedWidth />
+              <div className="flex flex-col justify-around">
+                <p className="text-xs leading-tight">Available on the</p>
+                <p className="text-lg font-medium tex-nowrap">Windows Store</p>
+              </div>
+              <div className='absolute py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer text-white inset-0 bg-brand-button-gradient opacity-0 shadow-2xl/50 hover:opacity-100 transition-all duration-300'>
+                <FontAwesomeIcon icon={faWindows} className='text-4xl' fixedWidth />
+                <div className="flex flex-col justify-around">
+                  <p className="text-xs leading-tight">Available on the</p>
+                  <p className="text-lg font-medium tex-nowrap">Windows Store</p>
+                </div>
+              </div>
+            </div>
 
 
 
+          </div>
 
-
-
+          {/* Socials */}
+          <div></div>
+        </div>
+      </div>
 
     </div>
   );

@@ -13,6 +13,7 @@
   --color-primary: #f83e65;
   --color-secondary: #fc8554;
   --color-bg-accent: #f2f4f5;
+  --color-dark: #313a47;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -37,7 +38,8 @@
     --background: #59687c;
     --foreground: #ffffff;
     --primary: #f83e65;
-    --secondary: #fc8554
+    --secondary: #fc8554;
+    --dark: #313a47;
 ;
     --gradient-color: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
   }

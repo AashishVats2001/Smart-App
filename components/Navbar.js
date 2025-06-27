@@ -23,7 +23,7 @@ function classNames(...classes) {
 const Navbar = () => {
   return (
     // To Add: When scroll up, get apply bg-brand-gradient else stay transparent
-    <nav className='flex bg- w-full justify-center items-center bg-brand-gradient text-white fixed top-0 ' style={{ "height": "90px" }}>
+    <nav className='flex bg- w-full justify-center items-center bg-brand-gradient text-white fixed top-0 z-50' style={{ "height": "90px" }}>
       <div className='flex justify-between items-center w-10/12 max-w-container px-[15px]'>
         {/* Logo */}
         <div className="flex gap-3 items-center justify-center">
