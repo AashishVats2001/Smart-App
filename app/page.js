@@ -1,6 +1,8 @@
-import Image from "next/image";
-import AmazingFeatures from "@/components/AmazingFeatures";
+"use client"
 
+import Image from "next/image";
+
+import AmazingFeatures from "@/components/AmazingFeatures";
 import HeaderPhone from '@/public/header-phone.png'
 import FeaturePhone from "@/public/features-mobile.png"
 import About from "@/public/about.png"
@@ -11,6 +13,7 @@ import AccordionImage from "@/public/accordion-image.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocation, faLocationPin, faMapLocationDot, faMobile, faMobileScreenButton, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faFigma, faGooglePay, faGooglePlay, faWindows } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "motion/react";
 import MoreFeatures from "@/components/MoreFeatures";
 import HowItWorksCarousel from "@/components/HowItWorksCarousel";
 import FAQs from "@/components/FAQs";
@@ -21,6 +24,7 @@ import PriceCards from "@/components/PriceCards";
 import BlogCards from "@/components/BlogCards";
 import Form from "@/components/Form";
 import SocialIcons from "@/components/SocialIcons";
+import QuickViewCarousel from "@/components/QuickViewCarousel";
 
 
 export default function Home() {
@@ -62,19 +66,35 @@ export default function Home() {
 
       {/* Amazing Features */}
       <div id="features" className="max-w-container w-full flex flex-col gap-16 items-center pt-20 justify-center">
-        <h2 className="text-5xl text-primary">Amazing Features</h2>
+        <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+          Amazing Features
+          <div className="w-10 h-1 bg-primary mt-2" />
+        </h2>
 
         <AmazingFeatures />
-
-        <Image src={FeaturePhone} />
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{
+            ease: [0, 0.71, 0.2, 1.01],
+            duration: 1,
+          }}
+          className="w-full"
+        >
+          <Image src={FeaturePhone} alt="Feautes" />
+        </motion.div>
       </div>
 
       {/* About */}
-      <div className="w-full flex items-center justify-center bg-bg-accent relative py-20 overflow-hidden">
+      <div id="about" className="w-full flex items-center justify-center bg-bg-accent relative py-20 overflow-hidden">
         <div className="max-w-container w-full flex items-center justify-start">
 
           <div id="about" className="w-1/2 flex flex-col gap-10 items-start justify-center">
-            <h2 className="text-5xl text-primary">About Smart</h2>
+            <h2 className="text-5xl text-primary flex flex-col gap-2 items-start">
+              About Smart
+              <div className="w-10 h-1 bg-primary mt-2" />
+            </h2>
             <p className="leading-7">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry's standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the industry's standard dndustry's standard dumummy text ever since the when an Lorem Ipsum.</p>
             <p className="leading-7">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text mmy text of tof the dummy text of the printing anprinting and typeseing.</p>
             {/* Download Buttons */}
@@ -99,18 +119,29 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <Image
-          src={About}
-          className=" absolute top-0 right-80"
-        />
+        <motion.div
+          initial={{ opacity: 0, x: 500 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{
+            ease: 'easeInOut',
+            duration: 1,
+          }}
+          className=" absolute top-0 right-50"
+        >
+          <Image
+            src={About}
+          />
+        </motion.div>
       </div>
 
       {/* More Features */}
-      <div className="w-full flex items-center justify-center bg-brand-gradient relative py-20">
+      <div id="more-features" className="w-full flex items-center justify-center bg-brand-gradient relative py-20">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-16 text-white">
-          <h2 className="text-5xl">More Features</h2>
-
+          <h2 className="text-5xl text-white flex flex-col gap-2 items-center">
+            More Features
+            <div className="w-10 h-1 bg-white mt-2" />
+          </h2>
           <p className="text-center w-3/4">Lorem Ipsum is simply dummy text of the printing and typesetting indus
             orem Ipsum has been the industry's standard dummy text ever since the when an own printer took a galley of type and scrambled it to make.</p>
 
@@ -120,7 +151,7 @@ export default function Home() {
       </div>
 
       {/* Designs */}
-      <div id="designs" className="max-w-container w-full flex flex-col items-center justify-center">
+      <div id="design" className="max-w-container w-full flex flex-col items-center justify-center">
         {/* <h2 className="text-5xl text-primary">Amazing Features</h2> */}
 
         {/* Design 1 */}
@@ -133,15 +164,34 @@ export default function Home() {
             {/* Description */}
             <p className="text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry's standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the indushe industry's stry's standard dummy text ever since the when an Lorem Ipsum.</p>
           </div>
-
-          <Image src={DesignRightImage} />
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+            }}
+            className="flex justify-center items-center w-[300%]"
+          >
+            <Image src={DesignRightImage} className="w-full h-full" />
+          </motion.div>
         </div>
 
         {/* Design 2 */}
         <div className="flex gap-2 items-center justify-center py-20">
-
-          <Image src={DesignLeftImage} />
-
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+            }}
+            className="flex justify-center items-center w-[300%]"
+          >
+            <Image src={DesignLeftImage} />
+          </motion.div>
           <div className="flex flex-col gap-10 items-start justify-between">
             {/* Icon */}
             <FontAwesomeIcon icon={faFigma} className="text-7xl text-primary" />
@@ -156,21 +206,35 @@ export default function Home() {
       </div>
 
       {/* How it Works */}
-      <div className="w-full flex items-center justify-center bg-bg-accent relative py-20 overflow-hidden">
+      <div id="how-it-works" className="w-full flex items-center justify-center bg-bg-accent relative py-20 overflow-hidden">
         <div className="max-w-container w-full flex flex-col gap-10 items-center justify-center overflow-x-hidden">
-          <h2 className="text-5xl text-primary">How it Works?</h2>
+          <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+            How It Works
+            <div className="w-10 h-1 bg-primary mt-2" />
+          </h2>
           <HowItWorksCarousel />
         </div>
       </div>
 
       {/* Download */}
-      <div className="w-full flex items-center justify-center bg-brand-gradient relative py-20">
+      <div id="download" className="w-full flex items-center justify-center bg-brand-gradient relative py-20">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-16 ">
-          <h2 className="text-5xl text-white">Smart Download</h2>
+          <h2 className="text-5xl text-white flex flex-col gap-2 items-center">
+            Smart Download
+            <div className="w-10 h-1 bg-white mt-2" />
+          </h2>
           <div className="flex justify-evenly w-3/4 gap-6">
 
             {/* App Store */}
-            <div className='py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer relative'>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                ease: "easeInOut",
+                duration: 1,
+              }}
+              className='py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer relative'>
               <FontAwesomeIcon icon={faMobileScreenButton} className='text-4xl' fixedWidth />
               <div className="flex flex-col justify-around">
                 <p className="text-xs leading-tight">Available on the</p>
@@ -183,10 +247,18 @@ export default function Home() {
                   <p className="text-lg font-medium tex-nowrap">iOS App Store</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Play Store */}
-            <div className='py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer relative'>
+            <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                ease: "easeInOut",
+                duration: 1,
+              }}
+              className='py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer relative'>
               <FontAwesomeIcon icon={faGooglePlay} className='text-4xl' fixedWidth />
               <div className="flex flex-col justify-around">
                 <p className="text-xs leading-tight">Available on the</p>
@@ -199,11 +271,19 @@ export default function Home() {
                   <p className="text-lg font-medium tex-nowrap">Play Store</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
 
             {/* Windows Store */}
-            <div className='py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer relative'>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                ease: "easeInOut",
+                duration: 1,
+              }}
+              className='py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer relative'>
               <FontAwesomeIcon icon={faWindows} className='text-4xl' fixedWidth />
               <div className="flex flex-col justify-around">
                 <p className="text-xs leading-tight">Available on the</p>
@@ -216,7 +296,7 @@ export default function Home() {
                   <p className="text-lg font-medium tex-nowrap">Windows Store</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
 
 
@@ -226,16 +306,21 @@ export default function Home() {
 
       {/* Carousel 2 */}
       <div id="quickview" className="max-w-container w-full flex flex-col gap-16 items-center py-20 justify-center">
-        <h2 className="text-5xl text-primary">Quick View</h2>
+        <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+          Quick View
+          <div className="w-10 h-1 bg-primary mt-2" />
+        </h2>
+
+        <QuickViewCarousel />
       </div>
 
       {/* FAQ */}
       <div id="faq" className="w-full flex items-center justify-center bg-bg-accent">
         <div className="max-w-container w-full flex items-center justify-center gap-5">
           <div className="w-full flex flex-col gap-10 items-start  justify-center">
-            <h2 className="text-5xl text-primary font-semibold flex flex-col gap-2 items-start">
+            <h2 className="text-5xl text-primary flex flex-col gap-2 items-start">
               FAQ
-              <div className="w-10 h-[2px] bg-primary " />
+              <div className="w-10 h-1 bg-primary mt-2" />
             </h2>
             <FAQs />
           </div>
@@ -246,10 +331,12 @@ export default function Home() {
 
       {/* Team */}
       <div id="team" className="max-w-container py-20 w-full flex flex-col gap-16 items-center justify-center">
-        <h2 className="text-5xl text-primary font-semibold flex flex-col gap-2 items-center">
+        <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
           Innovative Team
-          <div className="w-10 h-[2px] bg-primary " />
+          <div className="w-10 h-1 bg-primary mt-2" />
         </h2>
+
+
         <p className="text-center text-balance w-1/2">Lorem Ipsum is simply dummy text of the printing and
           typeseing industry Lorem Ipsum has been the industry's standard
           dummy text Lorem is simply dummy text of the printing and</p>
@@ -258,18 +345,18 @@ export default function Home() {
       </div>
 
       {/* Statistics */}
-      <div id="stats" className="w-full flex items-center justify-center py-36 bg-brand-gradient">
+      <section id="stats" className="w-full flex items-center justify-center py-36 bg-brand-gradient">
         <Stats />
-      </div>
+      </section>
 
       {/* Testimonials */}
-
-      <div id="testimonials" className="w-full flex items-center justify-center bg-bg-accent py-20">
+      <section id="testimonials" className="w-full flex items-center justify-center bg-bg-accent py-20">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-15">
           <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
             Trusted by 1000+ clients
-            <div className="w-10 h-1 bg-primary " />
+            <div className="w-10 h-1 bg-primary mt-2" />
           </h2>
+
 
           <p className="w-1/2 text-center">Lorem Ipsum is simply dummy text of the printing and
             typeseing industry Lorem Ipsum has been the industry's standard
@@ -278,16 +365,17 @@ export default function Home() {
 
           <Testimonials />
         </div>
-      </div>
+      </section>
 
 
       {/* Pricing */}
-      <div className="w-full flex flex-col items-center justify-center">
-        <div id="pricing" className="w-full flex items-center justify-center pt-36 pb-44 bg-brand-gradient">
-          <h2 className="text-5xl text-white flex flex-col gap-2 items-center leading-16">
+      <section id="pricing" className="w-full flex flex-col items-center justify-center">
+        <div className="w-full flex items-center justify-center pt-36 pb-44 bg-brand-gradient">
+          <h2 className="text-5xl text-white flex flex-col gap-2 items-center">
             Our Best Pricing
-            <div className="w-10 h-1 bg-white " />
+            <div className="w-10 h-1 bg-white mt-2" />
           </h2>
+
         </div>
 
         {/* Price Cards */}
@@ -295,14 +383,14 @@ export default function Home() {
 
           <PriceCards />
         </div>
-      </div>
+      </section>
 
       {/* Blogs */}
-      <div id="blogs" className="w-full flex items-center justify-center bg-bg-accent py-20">
+      <section id="blogs" className="w-full flex items-center justify-center bg-bg-accent py-20">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-15">
           <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
             Latest Blogs
-            <div className="w-10 h-1 bg-primary " />
+            <div className="w-10 h-1 bg-primary mt-2" />
           </h2>
 
           <p className="w-1/2 text-center text-muted">Lorem Ipsum is simply dummy text of the printing and
@@ -314,15 +402,15 @@ export default function Home() {
           <BlogCards />
         </div>
 
-      </div>
+      </section>
 
 
       {/* Subscribe */}
       <section id="subscribe" className="w-full flex items-center justify-center pt-20">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-15">
           <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
-            Subscribe
-            <div className="w-10 h-1 bg-primary " />
+            Subscribe Now
+            <div className="w-10 h-1 bg-primary mt-2" />
           </h2>
 
           <p className="w-1/2 text-center -mb-20 text-muted">Lorem Ipsum is simply dummy text of the printing and
@@ -331,7 +419,15 @@ export default function Home() {
           </p>
 
 
-          <div className="w-full flex bg-brand-gradient rounded-lg text-white translate-y-24 z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+            }}
+            className="w-full flex bg-brand-gradient rounded-lg text-white translate-y-24 z-10">
 
             {/* Contact Info */}
             <div className="flex items-start justify-center pt-20 pb-10 px-16 w-2/5 border-r-[0.1px] border-gray-300">
@@ -379,7 +475,7 @@ export default function Home() {
             <div className="flex items-start justify-center w-3/4 pt-20 pb-10 px-16">
               <Form />
             </div>
-          </div>
+          </motion.div>
         </div>
 
       </section>
@@ -446,12 +542,12 @@ export default function Home() {
 
           </div>
 
-          {/* Socials */}        
-            <SocialIcons />
-        <p className="text-white text-sm">© Copyright 2025. Developed by <span className="text-blue-400">DA</span></p>
+          {/* Socials */}
+          <SocialIcons />
+          <p className="text-white text-sm">© Copyright 2025. Developed by <span className="text-blue-400">DA</span></p>
         </div>
       </footer>
 
-    </div>
+    </div >
   );
 }

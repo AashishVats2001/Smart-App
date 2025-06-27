@@ -3,6 +3,7 @@ import MobileFeatures from "@/public/feature-mobile.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMicrophone, faComments, faLock, faMoon, faBuilding, faCheck } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image';
+import { motion } from 'motion/react';
 
 const features = [
     {
@@ -102,7 +103,19 @@ const MoreFeatures = () => {
             </div>
 
             {/* Center Image */}
-            <Image src={MobileFeatures} alt="Mobile Features" />
+            <motion.div
+                initial={{ opacity: 0, y: -300 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                    ease: "easeInOut",
+                    duration: 1,
+                }}
+            >
+                {/* <Image src={FeaturePhone} alt="Feautes" /> */}
+                <Image src={MobileFeatures} alt="Mobile Features" />
+            </motion.div>
+
 
             {/* Right Column */}
             <div className='flex flex-col gap-6 justify-evenly'>

@@ -43,8 +43,14 @@ const BlogCards = () => {
                     >
 
                         <motion.div
-                            whileHover={{ y: -10, transition: { type: 'spring', stiffness: 300 } }}
-                            className="rounded-xl bg-white overflow-hidden shadow-md transition-all z-10"
+                            whileHover={{
+                                y: [0, -45, 0, -24, 0, -4, 0],
+                                transition: {
+                                    duration: 0.6,
+                                    ease: 'easeOut',
+                                },
+                            }}
+                            className="rounded-xl bg-white overflow-hidden shadow-md z-10 cursor-pointer"
                         >
                             <div className="w-full h-60 relative">
                                 <Image

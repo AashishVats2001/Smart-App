@@ -63,3 +63,43 @@ body {
 .team-socials:hover {
   background-image: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
 }
+
+.link {
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0.3125rem;
+  height: 1px;
+  width: 0;
+  left: 50%;
+  margin: 0 auto;
+  background-color: white;
+  transition: 300ms linear;
+  transition-property: all;
+}
+
+.link:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* hide scrollbar for all modern browsers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}

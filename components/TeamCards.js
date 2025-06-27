@@ -1,9 +1,11 @@
+"use client"
 import Image from 'next/image';
 import { faFacebookF, faTwitter, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Team1 from '@/public/team-1.png';
 import Team2 from '@/public/team-2.png';
 import Team3 from '@/public/team-3.png';
+import { motion } from 'motion/react';
 
 
 const teamMembers = [
