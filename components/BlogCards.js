@@ -54,16 +54,16 @@ const BlogCards = () => {
                                     objectFit="cover"
                                 />
                             </div>
-                            <div className="p-6 flex flex-col gap-2">
-                                <div className="text-sm text-gray-400">
+                            <div className="p-6 flex flex-col gap-1">
+                                <div className="text-sm text-muted opacity-65">
                                     By {post.author} | ({post.comments}) Comments
                                 </div>
-                                <h3 className="text-lg font-semibold text-gray-800">{post.title}</h3>
-                                <p className="text-sm text-gray-500 font-medium">{post.date}</p>
-                                <p className="text-sm text-gray-600 leading-relaxed mt-2">{post.excerpt}</p>
+                                <h3 className="text-xl font-semibold ">{post.title}</h3>
+                                <p className="text-sm font-semibold opacity-90">{post.date}</p>
+                                <p className="text-sm text-muted leading-relaxed mt-2">{post.excerpt}</p>
                             </div>
                         </motion.div>
-                        <div className="bg-brand-gradient absolute left-0 right-0 bottom-0 z-0 py-3 text-center translate-y-1/2 pt-16 rounded-b-xl text-white text-base font-semibold cursor-pointer hover:opacity-90">
+                        <div className="bg-brand-gradient absolute left-0 right-0 text-start bottom-0 z-0 p-4 translate-y-1/2 pt-16 rounded-b-xl text-white text-sm font-semibold cursor-pointer hover:opacity-90">
                             READ MORE
                         </div>
                     </div>

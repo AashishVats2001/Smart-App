@@ -20,6 +20,7 @@ import Testimonials from "@/components/Testimonials";
 import PriceCards from "@/components/PriceCards";
 import BlogCards from "@/components/BlogCards";
 import Form from "@/components/Form";
+import SocialIcons from "@/components/SocialIcons";
 
 
 export default function Home() {
@@ -304,7 +305,7 @@ export default function Home() {
             <div className="w-10 h-1 bg-primary " />
           </h2>
 
-          <p className="w-1/2 text-center">Lorem Ipsum is simply dummy text of the printing and
+          <p className="w-1/2 text-center text-muted">Lorem Ipsum is simply dummy text of the printing and
             typeseing industry Lorem Ipsum has been the industry's standard
             dummy text Lorem is simply dummy text of the printing and
           </p>
@@ -317,20 +318,20 @@ export default function Home() {
 
 
       {/* Subscribe */}
-      <div id="subscribe" className="w-full flex items-center justify-center  pt-20">
+      <section id="subscribe" className="w-full flex items-center justify-center pt-20">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-15">
           <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
             Subscribe
             <div className="w-10 h-1 bg-primary " />
           </h2>
 
-          <p className="w-1/2 text-center">Lorem Ipsum is simply dummy text of the printing and
+          <p className="w-1/2 text-center -mb-20 text-muted">Lorem Ipsum is simply dummy text of the printing and
             typeseing industry Lorem Ipsum has been the industry's standard
             dummy text Lorem is simply dummy text of the printing and
           </p>
 
 
-          <div className="w-full flex bg-brand-gradient rounded-lg text-white">
+          <div className="w-full flex bg-brand-gradient rounded-lg text-white translate-y-24 z-10">
 
             {/* Contact Info */}
             <div className="flex items-start justify-center pt-20 pb-10 px-16 w-2/5 border-r-[0.1px] border-gray-300">
@@ -381,10 +382,10 @@ export default function Home() {
           </div>
         </div>
 
-      </div>
+      </section>
 
       {/* Footer */}
-      <div className="w-full flex items-center justify-center bg-dark relative pb-20 pt-40">
+      <footer className="w-full flex items-center justify-center bg-dark relative pb-20 pt-40">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-16 ">
           <h2 className="text-5xl text-white flex flex-col gap-2 items-center">
             Download Smart Now
@@ -445,10 +446,11 @@ export default function Home() {
 
           </div>
 
-          {/* Socials */}
-          <div></div>
+          {/* Socials */}        
+            <SocialIcons />
+        <p className="text-white text-sm">© Copyright 2025. Developed by <span className="text-blue-400">DA</span></p>
         </div>
-      </div>
+      </footer>
 
     </div>
   );

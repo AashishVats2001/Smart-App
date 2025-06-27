@@ -77,7 +77,7 @@ const Form = () => {
 
                 <button
                     type="submit"
-                    className="bg-brand-button-gradient text-white font-semibold px-16 py-3 rounded-full hover:bg-primary-dark"
+                    className="bg-brand-button-gradient cursor-pointer text-white font-semibold px-16 py-3 rounded-full shadow-sm hover:shadow-xl/20 hover:scale-[102%] transition-all"
                 >
                     Submit
                 </button>
