@@ -71,8 +71,8 @@ export default function Home() {
               About Smart
               <div className="w-10 h-1 bg-primary mt-2" />
             </h2>
-            <p className="leading-7">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry's standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the industry's standard dndustry's standard dumummy text ever since the when an Lorem Ipsum.</p>
-            <p className="leading-7">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text mmy text of tof the dummy text of the printing anprinting and typeseing.</p>
+            <p className="leading-7">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the industry&apos;s standard dndustry&apos;s standard dumummy text ever since the when an Lorem Ipsum.</p>
+            <p className="leading-7">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when an Lorem Ipsum is simply dummy text mmy text of tof the dummy text of the printing anprinting and typeseing.</p>
             {/* Download Buttons */}
             <div className="flex flex-col md:flex-row w-full justify-start gap-10 items-center">
               {/* App Store */}
@@ -143,7 +143,7 @@ export default function Home() {
             {/* Title */}
             <h2 className=" heading text-primary">Beautiful, Unique, Vibrant & Modern Design</h2>
             {/* Description */}
-            <p className="text-sm/7 md:text-base/8 lg:text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry's standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the indushe industry's stry's standard dummy text ever since the when an Lorem Ipsum.</p>
+            <p className="text-sm/7 md:text-base/8 lg:text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the industry&apos;s  standard dummy text ever since the when an Lorem Ipsum.</p>
           </div>
           <motion.div
             initial={{ opacity: 0, x: 100 }}
@@ -189,7 +189,7 @@ export default function Home() {
             {/* Title */}
             <h2 className=" heading text-5xl text-primary t">Beautiful, Unique, Vibrant & Modern Design</h2>
             {/* Description */}
-            <p className="text-sm/7 md:text-base/8 lg:text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry's standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the indushe industry's stry's standard dummy text ever since the when an Lorem Ipsum.</p>
+            <p className="text-sm/7 md:text-base/8 lg:text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when an Lorem Ipsum.</p>
           </div>
 
 
@@ -354,7 +354,7 @@ export default function Home() {
 
 
           <p className="w-full md:w-1/2 text-center text-sm md:text-base">Lorem Ipsum is simply dummy text of the printing and
-            typeseing industry Lorem Ipsum has been the industry's standard
+            typeseing industry Lorem Ipsum has been the industry&apos;s standard
             dummy text Lorem is simply dummy text of the printing and
           </p>
 

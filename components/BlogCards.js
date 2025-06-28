@@ -57,8 +57,6 @@ const BlogCards = () => {
                                 <Image
                                     src={post.image}
                                     alt={post.title}
-                                    layout="fill"
-                                    objectFit="cover"
                                 />
                             </div>
                             <div className="p-6 flex flex-col gap-1">
