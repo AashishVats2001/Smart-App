@@ -43,10 +43,21 @@
     --primary: #f83e65;
     --secondary: #fc8554;
     --button-primary: #46c8ff;
-    --button-secondary: ##81d37e;
+    --button-secondary: #81d37e;
     --dark: #313a47;
     --muted: #708198;
     --gradient-color: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    --color-background: #59687c;
+    --color-foreground: #ededed;
+    --color-primary: #f83e65;
+    --color-secondary: #fc8554;
+    --color-bg-accent: #f2f4f5;
+    --color-dark: #313a47;
+    --color-muted: #708198;
+    --color-button-primary: #46c8ff;
+    --color-button-secondary: #81d37e;
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
   }
 }
 
@@ -113,10 +124,10 @@ html {
   overflow-x: hidden;
 }
 
-.heading{
+.heading {
   @apply text-3xl md:text-4xl lg:text-5xl;
 }
 
-.heading>div{
+.heading>div {
   @apply h-[2px] md:h-1;
 }
