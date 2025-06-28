@@ -55,7 +55,7 @@ const PriceCards = () => {
     return (
         <div
             ref={ref}
-            className="w-full grid grid-cols-1 md:grid-cols-3 pb-20 -translate-y-32 items-center justify-center">
+            className="w-full grid grid-cols-1 md:grid-cols-3 pb-20 px-2 -translate-y-32 items-center gap-10 md:gap-0 justify-center">
             {plans.map((plan, index) => (
                 <motion.div
                     key={index}
@@ -63,7 +63,7 @@ const PriceCards = () => {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`rounded-lg  text-center relative pb-16 bg-gray-100 
-                        ${plan.highlight ? 'z-10 shadow-2xl/30' : 'z-0 shadow-lg'}`}
+                        ${plan.highlight ? 'z-10 shadow-2xl/30 max-md:order-1' : 'z-0 shadow-lg max-md:order-2'}`}
                 >
                     {/* Header */}
                     <div
@@ -87,8 +87,8 @@ const PriceCards = () => {
                     {/* Features */}
                     <ul className="text-base bg-white">
                         {plan.features.map((feature, i) => (
-                            <li key={i} className="py-5 px-4 flex w-full justify-center border-b-[1px] border-b-gray-200 ">
-                                <div className='w-1/2 flex items-center justify-start gap-3 text-nowrap'>
+                            <li key={i} className="py-5 px-4 flex w-full justify-center border-b-[1px] border-b-gray-200">
+                                <div className='w-1/2 flex items-center justify-start gap-3 text-nowrap text-sm lg:text-base'>
 
                                     <FontAwesomeIcon
                                         icon={feature.available ? faCheck : faTimes}

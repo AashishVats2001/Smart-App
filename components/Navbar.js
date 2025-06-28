@@ -1,11 +1,11 @@
-"use client"
+'use client';
 
-import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import Logo from '@/public/logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import Logo from '@/public/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const navigation = [
   { name: 'Home', href: '#home', current: true },
@@ -16,7 +16,7 @@ const navigation = [
   { name: 'Pricing', href: '#pricing', current: false },
   { name: 'Sub Menu', href: '#', current: false },
   { name: 'Contact Us', href: '#subscribe', current: false },
-]
+];
 
 const submenuItems = [
   { name: 'More Features', href: '#more-features' },
@@ -29,12 +29,13 @@ const submenuItems = [
 ];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [submenuOpen, setSubmenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -46,66 +47,34 @@ const Navbar = () => {
   }, []);
 
   return (
-    // To Add: When scroll up, get apply bg-brand-gradient else stay transparent
-    <nav className={classNames(
-      'flex bg- w-full justify-center text-white items-center fixed top-0 z-50 transition-all duration-300 ease-in-out',
-      scrolled ? 'bg-brand-gradient h-20' : 'bg-transparent h-[90px]'
-    )}
+    <nav
+      className={classNames(
+        'flex w-full justify-center items-center fixed top-0 z-50 transition-all duration-300 ease-in-out',
+        scrolled ? 'bg-brand-gradient h-20' : 'bg-transparent h-[90px]'
+      )}
     >
-      <div className='flex justify-between items-center w-10/12 max-w-container px-[15px]'>
+      <div className="flex justify-between items-center w-10/12 max-w-container px-[15px] text-white">
         {/* Logo */}
-        <div className="flex gap-3 items-center justify-center">
-          <Image
-            src={Logo}
-            width={25}
-            height={25}
-            alt='Brand-Logo'
-          />
-          <h2 className='text-4xl font-semibold'>Smart</h2>
+        <div className="flex gap-3 items-center">
+          <Image src={Logo} width={25} height={25} alt="Brand-Logo" />
+          <h2 className="text-4xl font-semibold">Smart</h2>
         </div>
 
-        {/* Links */}
-
-        {/* <div className='flex gap-6 font-medium text-lg'>
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              aria-current={item.current ? 'page' : undefined}
-              className={classNames(
-                item.current ? ' text-white' : 'hover:text-white',
-                'px-2.5 py-2 text-sm font-medium hover:underline no-underline underline-offset-3 transition-all duration-500',
-              )}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div> */}
-
-        <div className="flex gap-6 font-medium text-lg">
+        {/* Desktop Links */}
+        <div className="hidden lg:flex gap-6 font-medium text-lg">
           {navigation.map((item) =>
             item.name === 'Sub Menu' ? (
-              <div
-                key="SubMenu"
-                className="relative group"
-              >
-                <button
-                  className={classNames(
-                    'px-2.5 py-2 flex items-center gap-2 text-sm font-medium transition-all duration-300',
-                    ' text-white'
-                  )}
-                >
+              <div key="SubMenu" className="relative group">
+                <button className="px-2.5 py-2 flex items-center gap-2 text-sm font-medium transition-all duration-300 text-white">
                   {item.name}
                   <FontAwesomeIcon icon={faChevronDown} />
                 </button>
-
-                {/* Dropdown */}
-                <div className="absolute top-full left-0 w-56 bg-dark rounded-lg shadow-lg opacity-0 group-hover:opacity-100 hover:opacity-100 pointer-events-none group-hover:pointer-events-auto hover:pointer-events-auto transition-opacity duration-500 z-50 delay-200">
+                <div className="absolute top-full left-0 w-56 bg-dark rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-500 z-50 delay-200">
                   {submenuItems.map((subitem) => (
                     <Link
                       key={subitem.name}
                       href={subitem.href}
-                      className="block px-4 py-2 text-sm text-white transition-colors duration-200 link"
+                      className="block px-4 py-2 text-sm text-white hover:underline"
                     >
                       {subitem.name}
                     </Link>
@@ -116,7 +85,6 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                aria-current={item.current ? 'page' : undefined}
                 className={classNames(
                   item.current ? 'text-white' : 'hover:text-white',
                   'px-2.5 py-2 text-sm font-medium transition-all duration-500 link'
@@ -128,9 +96,63 @@ const Navbar = () => {
           )}
         </div>
 
+        {/* Mobile Menu Icon */}
+        <div className="lg:hidden">
+          <button onClick={() => setIsMenuOpen(true)}>
+            <FontAwesomeIcon icon={faBars} size="lg" />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Sidebar */}
+      <div
+        className={classNames(
+          'fixed top-0 left-0 h-full w-3/4 bg-dark text-white z-[9999] transition-transform duration-500 ease-in-out',
+          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        )}
+      >
+        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+          <Image src={Logo} width={25} height={25} alt="Brand-Logo" />
+          <button onClick={() => setIsMenuOpen(false)}>
+            <FontAwesomeIcon icon={faTimes} size="lg" />
+          </button>
+        </div>
+
+        <div className="flex flex-col gap-4 p-6">
+          {navigation.map((item) =>
+            item.name === 'Sub Menu' ? (
+              <div key="SubMenu">
+                <h3 className="text-sm uppercase font-semibold mb-2 text-gray-300">
+                  {item.name}
+                </h3>
+                <div className="pl-4 flex flex-col gap-2">
+                  {submenuItems.map((subitem) => (
+                    <Link
+                      key={subitem.name}
+                      href={subitem.href}
+                      className="text-white text-sm hover:underline"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {subitem.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-white text-base font-medium hover:underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            )
+          )}
+        </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

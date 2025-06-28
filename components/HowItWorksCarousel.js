@@ -101,12 +101,12 @@ const HowItWorksCarousel = () => {
                 {carouselData.map((item, index) => (
                     <div
                         key={index}
-                        className="min-w-full px-6 flex justify-between items-center gap-10 cursor-pointer"
+                        className="min-w-full px-6 flex flex-col md:flex-row justify-between items-center cursor-pointer"
                     >
                         {/* Text Content */}
                         <div className="max-w-xl flex flex-col gap-6">
-                            <h3 className="text-2xl font-semibold text-primary">{item.title}</h3>
-                            <p className="text-gray-500">{item.description}</p>
+                            <h3 className="text-2xl font-semibold text-primary text-center md:text-start">{item.title}</h3>
+                            <p className="text-gray-500 text-sm text-balance text-center md:text-start">{item.description}</p>
 
                             <div className="flex flex-col gap-6 mt-4">
                                 {item.points.map((point, i) => (
@@ -125,7 +125,13 @@ const HowItWorksCarousel = () => {
 
                         {/* Image Content */}
                         <div>
-                            <Image src={HowItWorks} alt="Slide" width={500} height={500} />
+                            <Image 
+                            src={HowItWorks} 
+                            width={500} 
+                            height={500}
+                            alt="Slide" 
+                            className='w-10/12'
+                             />
                         </div>
                     </div>
                 ))}

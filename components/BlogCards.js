@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import BlogImage from '@/public/blog-post1.jpg'
 
 
 const blogPosts = [
@@ -9,7 +10,7 @@ const blogPosts = [
         date: 'May 24, 2017',
         author: 'Admin',
         comments: 20,
-        image: '/blog1.jpg',
+        image: BlogImage,
         excerpt:
             'Lorem Ipsum is simply dummy text of the printing and typeseg indusry Lorem Ipsum e printing and has been the industry’s standard dummy text ever since the.',
     },
@@ -18,7 +19,7 @@ const blogPosts = [
         date: 'May 24, 2017',
         author: 'Admin',
         comments: 20,
-        image: '/blog2.jpg',
+        image: BlogImage,
         excerpt:
             'Lorem Ipsum is simply dummy text of the printing and typeseg indusry Lorem Ipsum e printing and has been the industry’s standard dummy text ever since the.',
     },
@@ -27,7 +28,7 @@ const blogPosts = [
         date: 'May 24, 2017',
         author: 'Admin',
         comments: 20,
-        image: '/blog3.jpg',
+        image: BlogImage,
         excerpt:
             'Lorem Ipsum is simply dummy text of the printing and typeseg indusry Lorem Ipsum e printing and has been the industry’s standard dummy text ever since the.',
     },
@@ -36,7 +37,7 @@ const blogPosts = [
 const BlogCards = () => {
     return (
         <div className="py-20 px-4">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-8">
                 {blogPosts.map((post, i) => (
                     <div className="flex flex-col relative"
                         key={i}

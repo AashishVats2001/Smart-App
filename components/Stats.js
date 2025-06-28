@@ -65,7 +65,7 @@ const AnimatedCounter = ({ value, suffix }) => {
     }, [isInView, value]);
 
     return (
-        <span ref={ref} className="text-6xl font-bold">
+        <span ref={ref} className="text-4xl md:text-5xl lg:ext-6xl font-bold">
             {count}
             {suffix}
         </span>
@@ -78,9 +78,9 @@ const Stats = () => {
 
             {statsData.map((stat, index) => (
                 <div key={index} className="flex flex-col items-center gap-6 text-white">
-                    <FontAwesomeIcon icon={stat.icon} size='4x' fixedWidth />
+                    <FontAwesomeIcon icon={stat.icon} size='2x md:3x lg:4x' fixedWidth />
                     <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                    <p className="text-lg font-semibold">{stat.label}</p>
+                    <p className="text-sm md:text-base lg:text-lg font-semibold">{stat.label}</p>
                 </div>
             ))}
 

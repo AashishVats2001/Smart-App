@@ -42,7 +42,7 @@ export default function Home() {
 
       {/* Amazing Features */}
       <div id="features" className="max-w-container w-full flex flex-col gap-16 items-center pt-20 justify-center">
-        <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+        <h2 className="heading text-primary flex flex-col gap-2 items-center">
           Amazing Features
           <div className="w-10 h-1 bg-primary mt-2" />
         </h2>
@@ -64,17 +64,17 @@ export default function Home() {
 
       {/* About */}
       <div id="about" className="w-full flex items-center justify-center bg-bg-accent relative py-20 overflow-hidden">
-        <div className="max-w-container w-full flex items-center justify-start">
+        <div className="max-w-container w-full flex items-center px-2 justify-center lg:justify-start">
 
-          <div id="about" className="w-1/2 flex flex-col gap-10 items-start justify-center">
-            <h2 className="text-5xl text-primary flex flex-col gap-2 items-start">
+          <div id="about" className="w-11/12 lg:w-1/2 flex flex-col gap-10 items-center lg:items-start justify-center">
+            <h2 className="heading text-primary flex flex-col gap-2 items-center lg:items-start">
               About Smart
               <div className="w-10 h-1 bg-primary mt-2" />
             </h2>
             <p className="leading-7">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry's standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the industry's standard dndustry's standard dumummy text ever since the when an Lorem Ipsum.</p>
             <p className="leading-7">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text mmy text of tof the dummy text of the printing anprinting and typeseing.</p>
             {/* Download Buttons */}
-            <div className="flex w-full justify-start gap-10 items-center">
+            <div className="flex flex-col md:flex-row w-full justify-start gap-10 items-center">
               {/* App Store */}
               <div className="flex justify-center items-center gap-4 ring-1 ring-primary rounded-full px-10 py-5 cursor-pointer bg-white hover:shadow-2xl/50 transition-all duration-300">
                 <FontAwesomeIcon icon={faMobileScreenButton} className="w-8" />
@@ -103,10 +103,15 @@ export default function Home() {
             ease: 'easeInOut',
             duration: 1,
           }}
-          className=" absolute top-0 right-50"
+          className=" absolute top-0 bottom-0 right-[5%] hidden lg:block w-2/5 min-h-[500px] h-full"
         >
           <Image
             src={About}
+            width={945}
+            height={975}
+            alt="About Image"
+            className=""
+
           />
         </motion.div>
       </div>
@@ -114,12 +119,12 @@ export default function Home() {
       {/* More Features */}
       <div id="more-features" className="w-full flex items-center justify-center bg-brand-gradient relative py-20">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-16 text-white">
-          <h2 className="text-5xl text-white flex flex-col gap-2 items-center">
+          <h2 className=" heading text-white flex flex-col gap-2 items-center">
             More Features
             <div className="w-10 h-1 bg-white mt-2" />
           </h2>
-          <p className="text-center w-3/4">Lorem Ipsum is simply dummy text of the printing and typesetting indus
-            orem Ipsum has been the industry's standard dummy text ever since the when an own printer took a galley of type and scrambled it to make.</p>
+          <p className="text-center w-3/4 text-sm md:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting indus
+            orem Ipsum has been the industry&apos;s standard dummy text ever since the when an own printer took a galley of type and scrambled it to make.</p>
 
           <MoreFeatures />
 
@@ -127,18 +132,18 @@ export default function Home() {
       </div>
 
       {/* Designs */}
-      <div id="design" className="max-w-container w-full flex flex-col items-center justify-center">
-        {/* <h2 className="text-5xl text-primary">Amazing Features</h2> */}
+      <div id="design" className="max-w-container w-full flex flex-col items-center justify-center px-2">
+        {/* <h2 className=" heading text-5xl text-primary">Amazing Features</h2> */}
 
         {/* Design 1 */}
-        <div className="flex gap-2 items-center justify-center py-20">
+        <div className="flex flex-col md:flex-row gap-2 items-center justify-center py-20">
           <div className="flex flex-col gap-10 items-start justify-between">
             {/* Icon */}
             <FontAwesomeIcon icon={faFigma} className="text-7xl text-primary" />
             {/* Title */}
-            <h2 className="text-5xl text-primary">Beautiful, Unique, Vibrant & Modern Design</h2>
+            <h2 className=" heading text-primary">Beautiful, Unique, Vibrant & Modern Design</h2>
             {/* Description */}
-            <p className="text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry's standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the indushe industry's stry's standard dummy text ever since the when an Lorem Ipsum.</p>
+            <p className="text-sm/7 md:text-base/8 lg:text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry's standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the indushe industry's stry's standard dummy text ever since the when an Lorem Ipsum.</p>
           </div>
           <motion.div
             initial={{ opacity: 0, x: 100 }}
@@ -148,14 +153,19 @@ export default function Home() {
               ease: "easeInOut",
               duration: 1,
             }}
-            className="flex justify-center items-center w-[300%]"
+            className="flex justify-center items-center w-[300%] px-2"
           >
-            <Image src={DesignRightImage} className="w-full h-full" />
+            <Image
+              src={DesignRightImage}
+              width={585}
+              height={525}
+              alt="Design Image"
+              className="w-1/4 md:w-full md:h-full" />
           </motion.div>
         </div>
 
         {/* Design 2 */}
-        <div className="flex gap-2 items-center justify-center py-20">
+        <div className="flex flex-col md:flex-row gap-2 items-center justify-center py-20">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -164,17 +174,22 @@ export default function Home() {
               ease: "easeInOut",
               duration: 1,
             }}
-            className="flex justify-center items-center w-[300%]"
+            className="flex justify-center items-center w-[300%] px-2 order-2 md:order-1"
           >
-            <Image src={DesignLeftImage} />
+            <Image
+              src={DesignLeftImage}
+              width={585}
+              height={525}
+              alt="Design Image"
+              className="w-1/4 md:w-full md:h-full" />
           </motion.div>
-          <div className="flex flex-col gap-10 items-start justify-between">
+          <div className="flex flex-col gap-10 items-start justify-between order-1 md:order-2">
             {/* Icon */}
             <FontAwesomeIcon icon={faFigma} className="text-7xl text-primary" />
             {/* Title */}
-            <h2 className="text-5xl text-primary">Beautiful, Unique, Vibrant & Modern Design</h2>
+            <h2 className=" heading text-5xl text-primary t">Beautiful, Unique, Vibrant & Modern Design</h2>
             {/* Description */}
-            <p className="text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry's standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the indushe industry's stry's standard dummy text ever since the when an Lorem Ipsum.</p>
+            <p className="text-sm/7 md:text-base/8 lg:text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry's standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry's standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the indushe industry's stry's standard dummy text ever since the when an Lorem Ipsum.</p>
           </div>
 
 
@@ -184,7 +199,7 @@ export default function Home() {
       {/* How it Works */}
       <div id="how-it-works" className="w-full flex items-center justify-center bg-bg-accent relative py-20 overflow-hidden">
         <div className="max-w-container w-full flex flex-col gap-10 items-center justify-center overflow-x-hidden">
-          <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+          <h2 className=" heading text-5xl text-primary flex flex-col gap-2 items-center">
             How It Works
             <div className="w-10 h-1 bg-primary mt-2" />
           </h2>
@@ -195,11 +210,11 @@ export default function Home() {
       {/* Download */}
       <div id="download" className="w-full flex items-center justify-center bg-brand-gradient relative py-20">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-16 ">
-          <h2 className="text-5xl text-white flex flex-col gap-2 items-center">
+          <h2 className=" heading text-5xl text-white flex flex-col gap-2 items-center">
             Smart Download
             <div className="w-10 h-1 bg-white mt-2" />
           </h2>
-          <div className="flex justify-evenly w-3/4 gap-6">
+          <div className="flex flex-col md:flex-row justify-evenly w-3/4 gap-6">
 
             {/* App Store */}
             <motion.div
@@ -282,7 +297,7 @@ export default function Home() {
 
       {/* Carousel 2 */}
       <div id="quickview" className="max-w-container w-full flex flex-col gap-16 items-center py-20 justify-center">
-        <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+        <h2 className=" heading text-5xl text-primary flex flex-col gap-2 items-center">
           Quick View
           <div className="w-10 h-1 bg-primary mt-2" />
         </h2>
@@ -291,30 +306,34 @@ export default function Home() {
       </div>
 
       {/* FAQ */}
-      <div id="faq" className="w-full flex items-center justify-center bg-bg-accent">
-        <div className="max-w-container w-full flex items-center justify-center gap-5">
-          <div className="w-full flex flex-col gap-10 items-start  justify-center">
-            <h2 className="text-5xl text-primary flex flex-col gap-2 items-start">
+      <div id="faq" className="w-full flex items-center justify-center bg-bg-accent py-20">
+        <div className="max-w-container w-full flex flex-col md:flex-row items-center justify-center gap-5 px-2">
+          <div className="w-full flex flex-col gap-10 items-center md:items-start justify-center">
+            <h2 className="heading text-primary flex flex-col gap-2 items-center md:items-start">
               FAQ
               <div className="w-10 h-1 bg-primary mt-2" />
             </h2>
             <FAQs />
           </div>
-          <Image src={AccordionImage} />
+          <Image src={AccordionImage}
+            width={585}
+            height={800}
+            alt="FAQ Image"
+            className="w-1/2" />
 
         </div>
       </div>
 
       {/* Team */}
       <div id="team" className="max-w-container py-20 w-full flex flex-col gap-16 items-center justify-center">
-        <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+        <h2 className=" heading text-5xl text-primary flex flex-col gap-2 items-center">
           Innovative Team
           <div className="w-10 h-1 bg-primary mt-2" />
         </h2>
 
 
-        <p className="text-center text-balance w-1/2">Lorem Ipsum is simply dummy text of the printing and
-          typeseing industry Lorem Ipsum has been the industry's standard
+        <p className="text-center text-balance md:w-1/2">Lorem Ipsum is simply dummy text of the printing and
+          typeseing industry Lorem Ipsum has been the industry&apos;s standard
           dummy text Lorem is simply dummy text of the printing and</p>
         <TeamCards />
 
@@ -328,13 +347,13 @@ export default function Home() {
       {/* Testimonials */}
       <section id="testimonials" className="w-full flex items-center justify-center bg-bg-accent py-20">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-15">
-          <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+          <h2 className=" heading text-5xl text-primary flex flex-col gap-2 items-center">
             Trusted by 1000+ clients
             <div className="w-10 h-1 bg-primary mt-2" />
           </h2>
 
 
-          <p className="w-1/2 text-center">Lorem Ipsum is simply dummy text of the printing and
+          <p className="w-full md:w-1/2 text-center text-sm md:text-base">Lorem Ipsum is simply dummy text of the printing and
             typeseing industry Lorem Ipsum has been the industry's standard
             dummy text Lorem is simply dummy text of the printing and
           </p>
@@ -347,7 +366,7 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="w-full flex flex-col items-center justify-center">
         <div className="w-full flex items-center justify-center pt-36 pb-44 bg-brand-gradient">
-          <h2 className="text-5xl text-white flex flex-col gap-2 items-center">
+          <h2 className=" heading text-5xl text-white flex flex-col gap-2 items-center">
             Our Best Pricing
             <div className="w-10 h-1 bg-white mt-2" />
           </h2>
@@ -363,14 +382,14 @@ export default function Home() {
 
       {/* Blogs */}
       <section id="blogs" className="w-full flex items-center justify-center bg-bg-accent py-20">
-        <div className="max-w-container w-full flex flex-col items-center justify-center gap-15">
-          <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+        <div className="max-w-container w-full flex flex-col items-center justify-center gap-15 px-2">
+          <h2 className=" heading text-5xl text-primary flex flex-col gap-2 items-center">
             Latest Blogs
             <div className="w-10 h-1 bg-primary mt-2" />
           </h2>
 
-          <p className="w-1/2 text-center text-muted">Lorem Ipsum is simply dummy text of the printing and
-            typeseing industry Lorem Ipsum has been the industry's standard
+          <p className="w-full md:w-1/2 text-center text-muted text-sm md:text-base">Lorem Ipsum is simply dummy text of the printing and
+            typeseing industry Lorem Ipsum has been the industry&apos;s standard
             dummy text Lorem is simply dummy text of the printing and
           </p>
 
@@ -383,14 +402,14 @@ export default function Home() {
 
       {/* Subscribe */}
       <section id="subscribe" className="w-full flex items-center justify-center pt-20">
-        <div className="max-w-container w-full flex flex-col items-center justify-center gap-15">
-          <h2 className="text-5xl text-primary flex flex-col gap-2 items-center">
+        <div className="max-w-container w-full flex flex-col items-center justify-center gap-15 px-2">
+          <h2 className=" heading text-5xl text-primary flex flex-col gap-2 items-center">
             Subscribe Now
             <div className="w-10 h-1 bg-primary mt-2" />
           </h2>
 
-          <p className="w-1/2 text-center -mb-20 text-muted">Lorem Ipsum is simply dummy text of the printing and
-            typeseing industry Lorem Ipsum has been the industry's standard
+          <p className="w-full md:w-1/2 text-center -mb-20 text-muted">Lorem Ipsum is simply dummy text of the printing and
+            typeseing industry Lorem Ipsum has been the industry&apos;s standard
             dummy text Lorem is simply dummy text of the printing and
           </p>
 
@@ -403,10 +422,10 @@ export default function Home() {
               ease: "easeInOut",
               duration: 1,
             }}
-            className="w-full flex bg-brand-gradient rounded-lg text-white translate-y-24 z-10">
+            className="w-full flex flex-col md:flex-row bg-brand-gradient rounded-lg text-white translate-y-24 z-10">
 
             {/* Contact Info */}
-            <div className="flex items-start justify-center pt-20 pb-10 px-16 w-2/5 border-r-[0.1px] border-gray-300">
+            <div className="flex items-start justify-center pt-20 pb-10 px-16 md:w-2/5 border-r-[0.1px] border-gray-300">
               <div className="flex flex-col gap-10 items-start">
 
                 <h3 className="text-2xl font-bold">Contact Info</h3>
@@ -448,7 +467,7 @@ export default function Home() {
             </div>
 
             {/* Form */}
-            <div className="flex items-start justify-center w-3/4 pt-20 pb-10 px-16">
+            <div className="flex items-center md:items-start justify-center w-full md:w-3/4 pt-20 pb-10 px-16">
               <Form />
             </div>
           </motion.div>
@@ -459,11 +478,11 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full flex items-center justify-center bg-dark relative pb-20 pt-40">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-16 ">
-          <h2 className="text-5xl text-white flex flex-col gap-2 items-center">
+          <h2 className=" heading text-5xl text-white flex flex-col gap-2 items-center">
             Download Smart Now
             <div className="w-10 h-1 bg-white mt-2" />
           </h2>
-          <div className="flex justify-evenly w-3/4 gap-6">
+          <div className="flex flex-col md:flex-row justify-stretch w-3/4 md:w-full lg:w-3/4 gap-6 px-2">
 
             {/* App Store */}
             <div className='py-5 w-full flex items-center justify-center gap-2 bg-white rounded-full cursor-pointer relative'>

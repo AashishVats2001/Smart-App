@@ -27,7 +27,7 @@ const features = [
 
 const AmazingFeatures = () => {
   return (
-    <div className='w-full flex justify-between items-center gap-10'>
+    <div className='w-full flex flex-col lg:flex-row justify-between items-center gap-10'>
       {features.map((feature, index) => (
         <motion.div
           initial={{ opacity: 0, y: -100 }}
@@ -39,7 +39,7 @@ const AmazingFeatures = () => {
             delay: index * 0.1,
           }}
           key={index}
-          className="flex flex-col gap-10 items-center justify-center transition-shadow hover:shadow-2xl/50 p-10 rounded-lg text-center max-w-xs"
+          className="flex flex-col gap-10 items-center justify-center transition-shadow hover:shadow-2xl/50 p-10 rounded-lg text-center max-w-xs lg:shadow-none shadow-xl"
         >
           <Image src={feature.image} alt={feature.title} />
           <h3 className="font-semibold text-2xl">{feature.title}</h3>

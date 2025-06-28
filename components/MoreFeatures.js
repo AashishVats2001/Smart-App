@@ -51,17 +51,17 @@ const FeatureCard = ({
     iconPosition = 'left' }) => {
     const iconElement = (
         <div className='p-6 flex items-center inset-ring-[0.5px] aspect-square inset-ring-white rounded-full relative cursor-pointer'>
-            <FontAwesomeIcon icon={icon} className='text-3xl' fixedWidth />
+            <FontAwesomeIcon icon={icon} className='text-xl md:text-2xl lg:text-3xl' fixedWidth />
             <div className='absolute flex justify-center aspect-square items-center inset-0 bg-brand-button-gradient rounded-full opacity-0 shadow-2xl/50 hover:opacity-100 transition-all duration-300'>
-                <FontAwesomeIcon icon={icon} className='text-3xl' fixedWidth />
+                <FontAwesomeIcon icon={icon} className='text-xl md:text-2xl lg:text-3xl' fixedWidth />
             </div>
         </div>
     );
 
     const text = (
         <div className={`flex flex-col gap-4 ${iconPosition === 'left' ? 'text-start' : 'text-end'}`}>
-            <h3 className='font-semibold text-xl'>{title}</h3>
-            <p>{description}</p>
+            <h3 className='font-semibold text-lg lg:text-xl'>{title}</h3>
+            <p className='text-sm lg:text-base'>{description}</p>
         </div>
     );
 
@@ -88,7 +88,7 @@ const MoreFeatures = () => {
     const rightFeatures = features.filter((f) => f.side === 'right')
 
     return (
-        <div className="flex w-full justify-center  gap-16 text-white">
+        <div className="flex flex-col md:flex-row items-center w-full justify-center  gap-16 text-white px-2">
             {/* Left Column */}
             <div className='flex flex-col gap-6 justify-evenly'>
                 {leftFeatures.map((feature, index) => (

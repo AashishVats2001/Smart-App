@@ -79,14 +79,16 @@ const QuickViewCarousel = () => {
                 {screens.map((img, idx) => (
                     <motion.div
                         key={idx}
-                        className="min-w-[250px] sm:min-w-[300px] md:min-w-[320px] lg:min-w-[340px] rounded-xl overflow-hidden shadow-lg bg-white"
+                        className="min-w-[150px] sm:min-w-[200px] md:min-w-[220px] lg:min-w-[240px] rounded-xl overflow-hidden shadow-lg bg-white"
                         whileTap={{ scale: 0.98 }}
                     >
                         <Image
                             draggable={false}
                             src={img}
+                            width={320}
+                            height={574}
                             alt={`screen-${idx}`}
-                            className="w-full h-auto object-cover"
+                            className="w-full h-full object-cover"
                         />
                     </motion.div>
                 ))}

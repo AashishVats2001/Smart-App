@@ -1,24 +1,28 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
 import { motion, useMotionValue, useAnimation } from 'framer-motion';
+import Team1 from '@/public/team-1.png';
+import Team2 from '@/public/team-2.png';
+import Team3 from '@/public/team-3.png';
+import Image from 'next/image';
 
 const testimonials = [
     {
         name: 'Devil Shohe',
         title: 'Founder at Smart Technologies',
-        image: '/user1.jpg',
+        image: Team1,
         text: 'Lorem Ipsum is simply dummy text of the printing and typeseing industry Lorem Ipsum has been the industry standard dummy text.',
     },
     {
         name: 'Sarah Lin',
         title: 'Marketing Director at XYZ Corp',
-        image: '/user2.jpg',
+        image: Team2,
         text: 'Fringilla sit amet nunc viverra aliquam. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula.',
     },
     {
         name: 'John Martin',
         title: 'CTO at WebWorks',
-        image: '/user3.jpg',
+        image: Team3,
         text: 'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta.',
     },
 ];
@@ -32,7 +36,7 @@ const Testimonials = () => {
 
     // Slide on index change
     useEffect(() => {
-        controls.start({ x: -index * 100 + '%' })
+        controls.start({ x: -index * 102 + '%' })
     }, [index, controls])
 
     // Autoplay
@@ -56,7 +60,7 @@ const Testimonials = () => {
     }
 
     return (
-        <div className="max-w-3xl mx-auto rounded-lg overflow-hidden">
+        <div className="max-w-3xl mx-auto rounded-lg overflow-hidden px-2">
             <motion.div
                 className="flex w-full cursor-grab gap-4"
                 drag="x"
@@ -75,10 +79,12 @@ const Testimonials = () => {
                         <div className='w-full flex flex-col items-center justify-center text-center rounded-lg shadow-sm z-20 px-6 py-16 h-80 gap-2 box-border bg-white '>
 
                             <div className="w-20 h-20 rounded-full border-4 border-white shadow overflow-hidden">
-                                <img
+                                <Image
                                     src={testimonial.image}
                                     alt={testimonial.name}
-                                    className="w-full h-full object-cover rounded-full"
+                                    width={50}
+                                    height={50}
+                                    className="w-20 h-20 object-cover rounded-full -translate-y-5 mx-auto"
                                 />
                             </div>
                             <h3 className="text-primary font-semibold text-lg">{testimonial.name}</h3>
