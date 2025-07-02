@@ -5,8 +5,13 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-import screen from '@/public/quick-view-2.png';
-const screens = [screen, screen, screen, screen, screen, screen, screen, screen, screen, screen];
+import screen1 from '@/public/right-image11.png';
+import screen2 from '@/public/quick-view-21.png';
+import screen3 from '@/public/features-mobile1.png';
+import screen4 from '@/public/left-image11.png';
+import screen5 from '@/public/about`.png';
+import screen6 from '@/public/header-phone1.png';
+const screens = [screen1, screen2, screen3, screen4, screen5, screen6, screen1, screen2, screen3, screen4, screen5, screen6];
 
 const QuickViewCarousel = () => {
     const containerRef = useRef(null);
@@ -75,6 +80,7 @@ const QuickViewCarousel = () => {
                 drag="x"
                 dragConstraints={constraints}
                 style={{ x }}
+
             >
                 {screens.map((img, idx) => (
                     <motion.div
@@ -90,6 +96,7 @@ const QuickViewCarousel = () => {
                             alt={`screen-${idx}`}
                             className="w-full h-full object-cover"
                         />
+
                     </motion.div>
                 ))}
             </motion.div>

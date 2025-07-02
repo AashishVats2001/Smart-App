@@ -5,25 +5,25 @@ import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 const faqData = [
     {
-        question: 'What is the Start App ?',
-        answer: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        question: 'Is YieldTap safe to use?',
+        answer: 'Yes. YieldTap is fully non-custodial. We never access or move your funds.',
     },
     {
-        question: 'Where can I download this app ?',
+        question: 'How does YieldTap actually track my DeFi yields across protocols and chains?',
         answer:
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '.repeat(20),
+            "YieldTap uses read-only access to your connected wallet address to scan and aggregate data from multiple DeFi protocols across supported blockchains. When you connect your wallet, YieldTap doesn't request any private keys or permissions to move funds — it simply reads your wallet's public positions. Behind the scenes, YieldTap integrates with smart contract APIs and on- chain indexing services like The Graph and custom node infrastructure to fetch live data.This includes your liquidity pool balances, staking positions, pending rewards, and farming stats.We unify this across chains like Ethereum, BSC, Polygon, Arbitrum, and others — so you can see it all in one place.The result? A real-time, unified yield dashboard showing your current ROI, APYs, rewards to claim, and asset performance — all while keeping your wallet and funds fully secure.",
     },
-    {
-        question: 'How to install this app ?',
-        answer: 'You can install it by downloading it from the App Store or Google Play.',
+{
+    question: 'Which wallets are supported?',
+        answer: 'We support MetaMask, WalletConnect, Coinbase Wallet, Trust Wallet, and others.',
     },
-    {
-        question: 'Is this app useful for business purpose ?',
-        answer: 'Yes, it helps you manage communication and productivity efficiently.',
-    },
-    {
-        question: 'Is this app useful for business purpose ?',
-        answer: 'Yes, very useful for small businesses, freelancers, and enterprise teams.',
+{
+    question: 'Do I need to create an account?',
+        answer: 'No accounts or emails required. Just connect your wallet to get started.'
+},
+{
+    question: ' Which blockchains can I track?',
+        answer: 'You can track assets on Ethereum, BSC, Polygon, Arbitrum, Avalanche, Optimism, and more.',
     },
 ];
 

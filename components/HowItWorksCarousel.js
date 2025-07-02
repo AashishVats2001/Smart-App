@@ -9,48 +9,64 @@ import {
     faGear,
     faRotate,
     faCommentDots,
+    faCircleArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import HowItWorks from '@/public/how-it-works-device.png';
 
 const carouselData = [
     {
-        title: 'How to install ?',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        title: 'How to install?',
+        description: 'Get started in under 60 seconds.',
         points: [
-            { icon: faGear, title: 'Config your mobile', desc: 'Config description...' },
-            { icon: faRotate, title: 'Refresh setup', desc: 'Refresh description...' },
-            { icon: faCommentDots, title: 'Chat with your love', desc: 'Chat description...' },
+            { icon: faGear, title: 'Visit the Website', desc: 'Go to our website from your browser (desktop or mobile).' },
+            { icon: faRotate, title: 'Connect Your Wallet', desc: 'Tap “Connect Wallet” and choose MetaMask, WalletConnect, or your preferred provider.' },
+            { icon: faCommentDots, title: 'Grant Read-Only Permission', desc: 'YieldTap never asks for private keys or transactions. We only read balances.' },
+            { icon: faCommentDots, title: 'Dashboard Loads Instantly', desc: 'Your assets, yields, and APYs auto-sync across all supported chains.' },
         ],
         image: '/how-it-works-slide1.png',
     },
     {
-        title: 'How to install ?',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        title: 'Connect Seamlessly.',
+        description: 'YieldTap simplifies yield tracking across DeFi with automation, analytics, and privacy-first design.',
         points: [
-            { icon: faGear, title: 'Config your mobile', desc: 'Config description...' },
-            { icon: faRotate, title: 'Refresh setup', desc: 'Refresh description...' },
-            { icon: faCommentDots, title: 'Chat with your love', desc: 'Chat description...' },
+            { icon: faCircleArrowRight, title: 'Wallet First, No Accounts', desc: 'No email or signup required' },
+            { icon: faGear, title: 'Wallet First, No Accounts', desc: 'Supports MetaMask, WalletConnect, Coinbase Wallet, and more' },
+            { icon: faRotate, title: 'Multi-Chain Ready', desc: 'Ethereum, BSC, Polygon, Arbitrum, Avalanche, Optimism, and more' },
+            { icon: faCommentDots, title: 'Multi-Chain Ready', desc: 'Auto-detects your active networks' },
         ],
         image: '/how-it-works-slide1.png',
     },
     {
-        title: 'How to install ?',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        title: 'Track Everything Automatically',
+        description: 'YieldTap simplifies yield tracking across DeFi with automation, analytics, and privacy-first design.',
         points: [
-            { icon: faGear, title: 'Config your mobile', desc: 'Config description...' },
-            { icon: faRotate, title: 'Refresh setup', desc: 'Refresh description...' },
-            { icon: faCommentDots, title: 'Chat with your love', desc: 'Chat description...' },
+            { icon: faGear, title: 'Real-Time Yield Aggregation', desc: 'See staked, farmed, and idle assets' },
+            { icon: faRotate, title: 'Real-Time Yield Aggregation', desc: 'Auto-fetches data from protocols like Aave, Curve, Lido, Yearn, etc.' },
+            { icon: faRotate, title: 'Portfolio Overview', desc: 'Total value locked (TVL), grouped by protocol and chain' },
+            { icon: faCommentDots, title: 'Portfolio Overview', desc: 'Clean charts with current balances, ROI, and projected APYs' },
         ],
         image: '/how-it-works-slide1.png',
     },
     {
-        title: 'How to install ?',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        title: 'Optimize & Grow',
+        description: 'YieldTap simplifies yield tracking across DeFi with automation, analytics, and privacy-first design.',
         points: [
-            { icon: faGear, title: 'Config your mobile', desc: 'Config description...' },
-            { icon: faRotate, title: 'Refresh setup', desc: 'Refresh description...' },
-            { icon: faCommentDots, title: 'Chat with your love', desc: 'Chat description...' },
+            { icon: faGear, title: 'Smart Suggestions', desc: 'YieldTap highlights underperforming assets' },
+            { icon: faGear, title: 'Smart Suggestions', desc: 'Recommends higher-yield alternatives based on your risk preference' },
+            { icon: faRotate, title: 'Smart Suggestions', desc: 'APY drops or new farming opportunities? You get pinged' },
+            { icon: faRotate, title: 'Smart Suggestions', desc: 'Custom notifications: “Claimable rewards,” “Better rates available,” etc.' },
+        ],
+        image: '/how-it-works-slide1.png',
+    },
+    {
+        title: 'Stay Secure, Always',
+        description: 'YieldTap simplifies yield tracking across DeFi with automation, analytics, and privacy-first design.',
+        points: [
+            { icon: faGear, title: '100% Non-Custodial', desc: 'You keep full control of your funds' },
+            { icon: faGear, title: '100% Non-Custodial', desc: 'No transactions are ever triggered without your approval' },
+            { icon: faRotate, title: 'Privacy-Friendly', desc: 'No tracking, no logins, no data selling' },
+            { icon: faRotate, title: 'Privacy-Friendly', desc: "Read-only access ensures you're always in control" },
         ],
         image: '/how-it-works-slide1.png',
     },
@@ -101,16 +117,16 @@ const HowItWorksCarousel = () => {
                 {carouselData.map((item, index) => (
                     <div
                         key={index}
-                        className="min-w-full px-6 flex flex-col md:flex-row justify-between items-center cursor-pointer"
+                        className="min-w-full px-6 flex flex-col md:flex-row justify-center items-center cursor-pointer"
                     >
                         {/* Text Content */}
-                        <div className="max-w-xl flex flex-col gap-6">
-                            <h3 className="text-2xl font-semibold text-primary text-center md:text-start">{item.title}</h3>
-                            <p className="text-gray-500 text-sm text-balance text-center md:text-start">{item.description}</p>
+                        <div className="max-w-xl flex flex-col gap-6 items-center">
+                            <h3 className="text-2xl font-semibold text-primary text-center ">{item.title}</h3>
+                            <p className="text-gray-500 text-sm md:text-base text-balance text-center ">{item.description}</p>
 
                             <div className="flex flex-col gap-6 mt-4">
                                 {item.points.map((point, i) => (
-                                    <div key={i} className="flex gap-4 items-start">
+                                    <div key={i} className="flex gap-4 items">
                                         <div className="bg-primary text-white p-4 rounded-lg">
                                             <FontAwesomeIcon icon={point.icon} className="w-5 h-5" />
                                         </div>
@@ -124,15 +140,15 @@ const HowItWorksCarousel = () => {
                         </div>
 
                         {/* Image Content */}
-                        <div>
-                            <Image 
-                            src={HowItWorks} 
-                            width={500} 
-                            height={500}
-                            alt="Slide" 
-                            className='w-10/12'
-                             />
-                        </div>
+                        {/* <div>
+                            <Image
+                                src={HowItWorks}
+                                width={500}
+                                height={500}
+                                alt="Slide"
+                                className='w-10/12'
+                            />
+                        </div> */}
                     </div>
                 ))}
             </motion.div>
@@ -164,7 +180,7 @@ const HowItWorksCarousel = () => {
                                 }`}
                         >
                             {i === activeIndex ? (
-                                <FontAwesomeIcon icon={item.points[0].icon} className="w-4 h-4" />
+                                <FontAwesomeIcon icon={faGear} className="w-4 h-4" />
                             ) : (
                                 <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
                             )}

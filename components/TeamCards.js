@@ -2,29 +2,29 @@
 import Image from 'next/image';
 import { faFacebookF, faTwitter, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Team1 from '@/public/team-1.png';
-import Team2 from '@/public/team-2.png';
-import Team3 from '@/public/team-3.png';
+import Team1 from '@/public/team-1.jpg';
+import Team2 from '@/public/team-2.jpg';
+import Team3 from '@/public/team-3.jpg';
 import { motion } from 'motion/react';
 
 
 const teamMembers = [
   {
-    name: 'Mark Denial',
-    title: 'Chief Developer',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typeseing in dustry Lorem Ipsum',
+    name: 'Alex Carter',
+    title: 'Founder & Smart Contract Architect',
+    description: 'A DeFi strategist with 6+ years in protocol design and yield optimization. Ethan leads vision and roadmap.',
     image: Team1,
   },
   {
-    name: 'Worner Smith',
-    title: 'UI Designer',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typeseing in dustry Lorem Ipsum',
+    name: 'Lena Navarro',
+    title: 'UI/UX Designer Head',
+    description: 'Lena creates intuitive, minimal interfaces that make complex data feel simple and beautiful.',
     image: Team2,
   },
   {
-    name: 'Jhon Due Stive',
-    title: 'Founder & CEO',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typeseing in dustry Lorem Ipsum',
+    name: 'Ravi Patel ',
+    title: 'Full-Stack Developer Head',
+    description: 'Ravi brings lightning-fast performance to YieldTap, ensuring seamless multi-chain data sync and wallet interactions.',
     image: Team3,
   },
 ];
@@ -35,13 +35,13 @@ const TeamCards = () => {
       <div className="max-w-6xl mx-auto gap-10 flex flex-col md:flex-row justify-center items-center px-4">
         {teamMembers.map((member, index) => (
           <div key={index} className="bg-white w-3/4 flex flex-col rounded-lg shadow-sm text-center transition-all hover:shadow-xl/20 duration-200">
-            <div className="w-full">
+            <div className="w-full max-h-60 h-full">
               <Image
                 src={member.image}
                 alt={member.name}
                 width={351}
                 height={271}
-                className="w-full"
+                className=" object-cover"
               />
             </div>
             <div className="p-8 space-y-0 w-full">
@@ -58,7 +58,7 @@ const TeamCards = () => {
                 </div>
 
                 <div className='p-4 flex w-12 h-12 bg-white rounded-full inset-ring-1 inset-ring-slate-600 items-center justify-center cursor-pointer team-socials hover:text-white hover:inset-ring-0 transition-all'>
-                  <FontAwesomeIcon icon={faGooglePlusG} className='w-5 h-5' fixedWidth/>
+                  <FontAwesomeIcon icon={faGooglePlusG} className='w-5 h-5' fixedWidth />
                 </div>
               </div>
             </div>

@@ -4,15 +4,15 @@ import Image from "next/image";
 
 import AmazingFeatures from "@/components/AmazingFeatures";
 import HeaderPhone from '@/public/header-phone.png'
-import FeaturePhone from "@/public/features-mobile.png"
-import About from "@/public/about.png"
-import DesignRightImage from "@/public/right-image1.png"
-import DesignLeftImage from "@/public/left-image1.png";
+import FeaturePhone from "@/public/features-mobile1.png"
+import About from "@/public/about`.png"
+import DesignRightImage from "@/public/right-image11.png"
+import DesignLeftImage from "@/public/left-image11.png";
 import AccordionImage from "@/public/accordion-image.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faLocation, faLocationPin, faMapLocationDot, faMobile, faMobileScreenButton, faPhone } from '@fortawesome/free-solid-svg-icons'
-import { faFigma, faGooglePay, faGooglePlay, faWindows } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faLaptop, faLocation, faLocationPin, faMapLocationDot, faMobile, faMobileScreenButton, faPhone, faWind } from '@fortawesome/free-solid-svg-icons'
+import { faFigma, faGooglePay, faGooglePlay, faTwitter, faWindows } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "motion/react";
 import MoreFeatures from "@/components/MoreFeatures";
 import HowItWorksCarousel from "@/components/HowItWorksCarousel";
@@ -43,7 +43,7 @@ export default function Home() {
       {/* Amazing Features */}
       <div id="features" className="max-w-container w-full flex flex-col gap-16 items-center pt-20 justify-center">
         <h2 className="heading text-primary flex flex-col gap-2 items-center">
-          Amazing Features
+          Features
           <div className="w-10 h-1 bg-primary mt-2" />
         </h2>
 
@@ -56,9 +56,9 @@ export default function Home() {
             ease: [0, 0.71, 0.2, 1.01],
             duration: 1,
           }}
-          className="w-full"
+          className="w-full flex justify-center"
         >
-          <Image src={FeaturePhone} alt="Feautes" />
+          <Image src={FeaturePhone} alt="Features" width={400} height={200} className="w-3/5 -rotate-[20deg]" />
         </motion.div>
       </div>
 
@@ -68,16 +68,16 @@ export default function Home() {
 
           <div id="about" className="w-11/12 lg:w-1/2 flex flex-col gap-10 items-center lg:items-start justify-center">
             <h2 className="heading text-primary flex flex-col gap-2 items-center lg:items-start">
-              About Smart
+              About YieldTap
               <div className="w-10 h-1 bg-primary mt-2" />
             </h2>
-            <p className="leading-7">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the industry&apos;s standard dndustry&apos;s standard dumummy text ever since the when an Lorem Ipsum.</p>
-            <p className="leading-7">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when an Lorem Ipsum is simply dummy text mmy text of tof the dummy text of the printing anprinting and typeseing.</p>
+            <p className="leading-7">We built YieldTap to solve a simple problem: tracking and optimizing your crypto yields shouldn&apos;t be complicated. With protocols scattered across chains and APYs that shift hourly, staying on top of your passive income takes work — or it used to.</p>
+            <p className="leading-7">YieldTap simplifies everything by unifying your yield farming, staking, and vault strategies into a single intuitive dashboard. Whether you&apos;re yield-maxi or just getting started, we give you the clarity and control to make smarter moves, faster.</p>
             {/* Download Buttons */}
             <div className="flex flex-col md:flex-row w-full justify-start gap-10 items-center">
               {/* App Store */}
               <div className="flex justify-center items-center gap-4 ring-1 ring-primary rounded-full px-10 py-5 cursor-pointer bg-white hover:shadow-2xl/50 transition-all duration-300">
-                <FontAwesomeIcon icon={faMobileScreenButton} className="w-8" />
+                <FontAwesomeIcon icon={faMobileScreenButton} className="text-lg md:text-xl lg:text-2xl" />
                 <div className="flex flex-col text-start">
                   <p className="text-xs leading-tight">Available on the</p>
                   <p className="text-lg font-medium tex-nowrap">iOS App Store</p>
@@ -86,7 +86,7 @@ export default function Home() {
 
               {/* Play Store */}
               <div className="flex justify-center items-center gap-4 bg-brand-button-gradient text-white rounded-full px-10 py-5 cursor-pointer shadow-2xl/50 ">
-                <FontAwesomeIcon icon={faGooglePlay} className="w-8" />
+                <FontAwesomeIcon icon={faGooglePlay} className="text-lg md:text-xl lg:text-2xl" />
                 <div className="flex flex-col text-start">
                   <p className="text-xs leading-tight">Available on the</p>
                   <p className="text-lg font-medium tex-nowrap">Play Store</p>
@@ -103,14 +103,14 @@ export default function Home() {
             ease: 'easeInOut',
             duration: 1,
           }}
-          className=" absolute top-0 bottom-0 right-[5%] hidden lg:block w-2/5 min-h-[500px] h-full"
+          className=" absolute top-0 bottom-0 right-[5%] hidden lg:block w-2/5 max-h-[500px] h-full"
         >
           <Image
             src={About}
             width={945}
             height={975}
             alt="About Image"
-            className=""
+            className="w-1/2 min-w-[600px]"
 
           />
         </motion.div>
@@ -139,11 +139,13 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-2 items-center justify-center py-20">
           <div className="flex flex-col gap-10 items-start justify-between">
             {/* Icon */}
-            <FontAwesomeIcon icon={faFigma} className="text-7xl text-primary" />
+            <FontAwesomeIcon icon={faLaptop} className="text-7xl text-primary" />
             {/* Title */}
-            <h2 className=" heading text-primary">Beautiful, Unique, Vibrant & Modern Design</h2>
+            <h2 className=" heading text-primary">Intuitive Interface, Designed for Clarity</h2>
             {/* Description */}
-            <p className="text-sm/7 md:text-base/8 lg:text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the industry&apos;s  standard dummy text ever since the when an Lorem Ipsum.</p>
+            <p className="text-sm/7 md:text-base/8 lg:text-lg/8">YieldTap&apos;s interface is crafted with one goal: to make DeFi yields understandable at a glance.
+              No clutter. No noise. Just your assets, performance, and opportunities — cleanly visualized.
+              We use a minimalist dark theme with bold contrast, glowing data points, and intuitive icons to help you navigate complex DeFi ecosystems without friction. Whether you&apos;re a pro or new to DeFi, you&apos;ll feel right at home.</p>
           </div>
           <motion.div
             initial={{ opacity: 0, x: 100 }}
@@ -185,11 +187,14 @@ export default function Home() {
           </motion.div>
           <div className="flex flex-col gap-10 items-start justify-between order-1 md:order-2">
             {/* Icon */}
-            <FontAwesomeIcon icon={faFigma} className="text-7xl text-primary" />
+            <FontAwesomeIcon icon={faWind} className="text-7xl text-primary" />
             {/* Title */}
-            <h2 className=" heading text-5xl text-primary t">Beautiful, Unique, Vibrant & Modern Design</h2>
+            <h2 className=" heading text-5xl text-primary">Built for Speed and Simplicity</h2>
             {/* Description */}
-            <p className="text-sm/7 md:text-base/8 lg:text-lg/8">Lorem Ipsum is simply dummy text of the printing and typeseing indury Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when an Lorem Ipsum is simply dummy text of the dummy text of the printing anprinting Amazing Smart app landing page Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when.Lorem Ipsum is simply text of the y Lorem Ipsum has been the industry&apos;s standard dummy text ever since the when an Lorem Ipsum.</p>
+            <p className="text-sm/7 md:text-base/8 lg:text-lg/8">Most dashboards feel like spreadsheets — YieldTap feels like a product.
+              Built with lightweight components and real-time syncing, your data loads fast and updates instantly.
+              One-tap wallet connections, actionable charts, and an experience optimized for mobile and desktop mean you spend less time clicking — and more time earning.
+            </p>
           </div>
 
 
@@ -315,7 +320,7 @@ export default function Home() {
             </h2>
             <FAQs />
           </div>
-          <Image src={AccordionImage}
+          <Image src={DesignRightImage}
             width={585}
             height={800}
             alt="FAQ Image"
@@ -332,9 +337,9 @@ export default function Home() {
         </h2>
 
 
-        <p className="text-center text-balance md:w-1/2">Lorem Ipsum is simply dummy text of the printing and
+        {/* <p className="text-center text-balance md:w-1/2">Lorem Ipsum is simply dummy text of the printing and
           typeseing industry Lorem Ipsum has been the industry&apos;s standard
-          dummy text Lorem is simply dummy text of the printing and</p>
+          dummy text Lorem is simply dummy text of the printing and</p> */}
         <TeamCards />
 
       </div>
@@ -353,9 +358,7 @@ export default function Home() {
           </h2>
 
 
-          <p className="w-full md:w-1/2 text-center text-sm md:text-base">Lorem Ipsum is simply dummy text of the printing and
-            typeseing industry Lorem Ipsum has been the industry&apos;s standard
-            dummy text Lorem is simply dummy text of the printing and
+          <p className="w-full md:w-1/2 text-center text-sm md:text-base">Real feedback from our early adopters.
           </p>
 
           <Testimonials />
@@ -381,7 +384,7 @@ export default function Home() {
       </section>
 
       {/* Blogs */}
-      <section id="blogs" className="w-full flex items-center justify-center bg-bg-accent py-20">
+      {/* <section id="blogs" className="w-full flex items-center justify-center bg-bg-accent py-20">
         <div className="max-w-container w-full flex flex-col items-center justify-center gap-15 px-2">
           <h2 className=" heading text-5xl text-primary flex flex-col gap-2 items-center">
             Latest Blogs
@@ -397,7 +400,7 @@ export default function Home() {
           <BlogCards />
         </div>
 
-      </section>
+      </section> */}
 
 
       {/* Subscribe */}
@@ -429,18 +432,7 @@ export default function Home() {
               <div className="flex flex-col gap-10 items-start">
 
                 <h3 className="text-2xl font-bold">Contact Info</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus orem Ipsum has been the industrys.</p>
-
-                {/* Call Us */}
-                <div className="flex items-start gap-4 text-white">
-                  <div className="pt-2.5 px-2.5 pb-1 rounded-full border-[0.5px] border-white">
-                    <FontAwesomeIcon icon={faPhone} className="w-5! h-5!" />
-                  </div>
-                  <div className="flex flex-col items-start font-medium">
-                    <h4 className="text-xl ">Call us</h4>
-                    <p className="text-sm">+91 123 456 7890</p>
-                  </div>
-                </div>
+                <p>Got questions, feedback, or partnership inquiries? We&apos;re here to help.</p>
 
                 {/* Email Us */}
                 <div className="flex items-start gap-4 text-white">
@@ -449,9 +441,21 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col items-start font-medium">
                     <h4 className="text-xl">Email us</h4>
-                    <p className="text-sm">@support@gmail.com</p>
+                    <p className="text-sm">support@yieldtap.xyz</p>
                   </div>
                 </div>
+
+                {/* twitter*/}
+                <div className="flex items-start gap-4 text-white">
+                  <div className="pt-2.5 px-2.5 pb-1 rounded-full border-[0.5px] border-white">
+                    <FontAwesomeIcon icon={faTwitter} className="w-5! h-5!" />
+                  </div>
+                  <div className="flex flex-col items-start font-medium">
+                    <h4 className="text-xl ">Twitter</h4>
+                    <p className="text-sm">@YieldTap</p>
+                  </div>
+                </div>
+
 
                 {/* Location */}
                 <div className="flex items-start gap-4 text-white">
@@ -460,7 +464,7 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col items-start font-medium">
                     <h4 className="text-xl">Location</h4>
-                    <p className="text-sm">125 Business Evenua, Huston USA</p>
+                    <p className="text-sm">Remote-first, globally distributed team</p>
                   </div>
                 </div>
               </div>

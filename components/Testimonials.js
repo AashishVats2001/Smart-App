@@ -1,29 +1,36 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
 import { motion, useMotionValue, useAnimation } from 'framer-motion';
-import Team1 from '@/public/team-1.png';
-import Team2 from '@/public/team-2.png';
-import Team3 from '@/public/team-3.png';
+import Team1 from '@/public/testimonial-2.jpg';
+import Team2 from '@/public/testimonial-3.jpg';
+import Team3 from '@/public/testimonial-1.jpg';
+import Team4 from '@/public/testimonial-4.jpg';
 import Image from 'next/image';
 
 const testimonials = [
     {
-        name: 'Devil Shohe',
-        title: 'Founder at Smart Technologies',
+        name: 'Amir S.',
+        title: 'Yield Farmer',
         image: Team1,
-        text: 'Lorem Ipsum is simply dummy text of the printing and typeseing industry Lorem Ipsum has been the industry standard dummy text.',
+        text: 'YieldTap makes my DeFi income effortless and visible — finally.',
     },
     {
-        name: 'Sarah Lin',
-        title: 'Marketing Director at XYZ Corp',
+        name: 'Rachel K.',
+        title: 'Passive Income Enthusiast',
         image: Team2,
-        text: 'Fringilla sit amet nunc viverra aliquam. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula.',
+        text: 'No fluff. Just clean data and real APYs',
     },
     {
-        name: 'John Martin',
-        title: 'CTO at WebWorks',
+        name: 'Tom L.',
+        title: 'Crypto Portfolio Manager',
         image: Team3,
-        text: 'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta.',
+        text: 'I moved my funds smarter after seeing the insights.',
+    },
+    {
+        name: 'Janice W.',
+        title: 'Web3 Analyst',
+        image: Team4,
+        text: 'This dashboard does in seconds what took me 3 apps before.',
     },
 ];
 
@@ -84,7 +91,7 @@ const Testimonials = () => {
                                     alt={testimonial.name}
                                     width={50}
                                     height={50}
-                                    className="w-20 h-20 object-cover rounded-full -translate-y-5 mx-auto"
+                                    className="w-20 h-20 object-cover rounded-full mx-auto"
                                 />
                             </div>
                             <h3 className="text-primary font-semibold text-lg">{testimonial.name}</h3>

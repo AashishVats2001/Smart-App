@@ -3,7 +3,11 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+    faBitcoinSign,
     faDownload,
+    faMoneyBillTrendUp,
+    faTerminal,
+    faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -15,28 +19,28 @@ import {
 
 const statsData = [
     {
-        icon: faDownload,
-        value: 200,
-        suffix: 'K',
-        label: 'App Download',
+        icon: faMoneyBillTrendUp,
+        value: 42,
+        suffix: 'M+',
+        label: 'Tracked Assets',
     },
     {
-        icon: faThumbsUp,
-        value: 50,
-        suffix: 'K',
-        label: 'Free Download',
-    },
-    {
-        icon: faHandshake,
-        value: 95,
-        suffix: '%',
-        label: 'Return Customers',
-    },
-    {
-        icon: faStar,
-        value: 10,
+        icon: faBitcoinSign,
+        value: 12,
         suffix: '+',
-        label: 'Best Awards',
+        label: 'Blockchain Supported',
+    },
+    {
+        icon: faUser,
+        value: 18,
+        suffix: 'K+',
+        label: 'Users Connected',
+    },
+    {
+        icon: faTerminal,
+        value: 300,
+        suffix: '+',
+        label: 'Protocols Indexed',
     },
 ];
 
@@ -78,7 +82,7 @@ const Stats = () => {
 
             {statsData.map((stat, index) => (
                 <div key={index} className="flex flex-col items-center gap-6 text-white">
-                    <FontAwesomeIcon icon={stat.icon} size='2x md:3x lg:4x' fixedWidth />
+                    <FontAwesomeIcon icon={stat.icon} size='' className='text-4xl md:text-5xl lg:text-6xl' fixedWidth />
                     <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                     <p className="text-sm md:text-base lg:text-lg font-semibold">{stat.label}</p>
                 </div>

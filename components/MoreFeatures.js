@@ -1,5 +1,5 @@
 import React from 'react'
-import MobileFeatures from "@/public/feature-mobile.png"
+import MobileFeatures from "@/public/header-phone1.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMicrophone, faComments, faLock, faMoon, faBuilding, faCheck } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image';
@@ -7,38 +7,38 @@ import { motion } from 'motion/react';
 
 const features = [
     {
-        title: 'Application Records',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typeseing',
+        title: 'Real-Time Yield Tracking',
+        description: 'Live APYs, rewards, and positions synced.',
         icon: faMicrophone,
         side: 'left',
     },
     {
-        title: 'Best for Business',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typeseing',
+        title: 'Multi-Chain Support',
+        description: 'Track assets across all major chains.',
         icon: faBuilding,
         side: 'left',
     },
     {
-        title: 'Full Free Chat',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typeseing',
+        title: 'Smart Yield Insights',
+        description: 'Optimize yield with data-backed suggestions.',
         icon: faComments,
         side: 'left',
     },
     {
-        title: 'Retina Ready',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typeseing',
+        title: 'One-Tap Connect',
+        description: 'Instant sync with your DeFi wallet',
         icon: faCheck,
         side: 'right',
     },
     {
-        title: 'Secure Extra',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typeseing',
+        title: 'Custom Alerts',
+        description: 'Get notified for better yield opportunities.',
         icon: faLock,
         side: 'right',
     },
     {
-        title: 'Night Vision',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typeseing',
+        title: 'Non-Custodial & Secure',
+        description: 'Your funds, your keys — always safe.',
         icon: faMoon,
         side: 'right',
     },
@@ -113,7 +113,13 @@ const MoreFeatures = () => {
                 }}
             >
                 {/* <Image src={FeaturePhone} alt="Feautes" /> */}
-                <Image src={MobileFeatures} alt="Mobile Features" />
+                <Image
+                    src={MobileFeatures}
+                    width={470}
+                    height={633}
+                    alt='App Hero Photo'
+                    className='bg-white scale-70 rounded-[4rem]'
+                />
             </motion.div>
 
 

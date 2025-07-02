@@ -9,15 +9,15 @@ import { useInView } from 'react-intersection-observer';
 
 const plans = [
     {
-        name: 'Basic Plan',
-        price: 49,
+        name: 'Free Plan',
+        price: 0,
         highlight: false,
         features: [
-            { label: 'Limited Install', available: true },
-            { label: 'Unlimited Download', available: true },
-            { label: 'Free One Year Support', available: true },
-            { label: 'Free 15GB Linux Hosting', available: false },
-            { label: '30GB Storage', available: false },
+            { label: 'Connect up to 2 wallets', available: true },
+            { label: 'Support for 2 chains', available: true },
+            { label: 'Basic portfolio overview', available: true },
+            { label: 'Weekly yield updates', available: false },
+            { label: 'APY alerts', available: false },
         ],
     },
     {
@@ -25,12 +25,12 @@ const plans = [
         price: 99,
         highlight: true, // active gradient
         features: [
-            { label: 'Limited Install', available: true },
-            { label: 'Unlimited Download', available: true },
-            { label: 'Free One Year Support', available: true },
-            { label: 'Free 15GB Linux Hosting', available: true },
-            { label: '30GB Storage', available: false },
-            { label: 'Unlimited Data', available: false },
+            { label: 'Unlimited wallet connections', available: true },
+            { label: 'Access to 10+ chains', available: true },
+            { label: 'Full performance dashboard', available: true },
+            { label: 'Real-time APY alerts', available: true },
+            { label: 'Yield optimization tips', available: false },
+            { label: 'APY alerts', available: false },
         ],
     },
     {
@@ -38,11 +38,11 @@ const plans = [
         price: 150,
         highlight: false,
         features: [
-            { label: 'Limited Install', available: true },
-            { label: 'Unlimited Download', available: true },
-            { label: 'Free One Year Support', available: true },
-            { label: 'Free 15GB Linux Hosting', available: true },
-            { label: '30GB Storage', available: true },
+            { label: 'Everything in Pro', available: true },
+            { label: 'Custom yield alerts', available: true },
+            { label: 'Real-time APY alerts', available: true },
+            { label: 'Auto-detect underperforming assets', available: true },
+            { label: 'Early access to beta features', available: true },
         ],
     },
 ];

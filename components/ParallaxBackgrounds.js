@@ -39,13 +39,13 @@ const ParallaxBackgrounds = () => {
     return (
         <div ref={containerRef} className="absolute bottom-0 lef-0 right-0 w-full h-auto pointer-events-none z-30 translate-y-10 overflow-x-clip">
             <div className="absolute bottom-0 left-0 w-full transition-transform duration-200 ease-out parallax-layer scale-200 md:scale-125" ref={layer1Ref}>
-                <Image src={background1} alt="bg-1" width={3400} height={500} priority />
+                <Image src={background1} alt="bg-1" width={3400} height={500} priority className='parallax filter hue-rotate-[230deg] saturate-[100%]' />
             </div>
             <div className="absolute bottom-0 left-0 w-full transition-transform duration-300 ease-out parallax-layer scale-200 md:scale-125" ref={layer2Ref}>
                 <Image src={background2} alt="bg-2" width={3400} height={500} priority />
             </div>
             <div className="absolute bottom-0 left-0 w-full transition-transform duration-500 ease-out parallax-layer scale-200 md:scale-125" ref={layer3Ref}>
-                <Image src={background3} alt="bg-3" width={3400} height={500} priority />
+                <Image src={background3} alt="bg-3" width={3400} height={500} priority className='parallax filter hue-rotate-[280deg] saturate-[100%]'/>
             </div>
         </div>
     );

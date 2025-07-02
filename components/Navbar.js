@@ -39,7 +39,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setScrolled(scrollTop > 10);
+      setScrolled(scrollTop > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -50,14 +50,14 @@ const Navbar = () => {
     <nav
       className={classNames(
         'flex w-full justify-center items-center fixed top-0 z-50 transition-all duration-300 ease-in-out',
-        scrolled ? 'bg-brand-gradient h-20' : 'bg-transparent h-[90px]'
+        scrolled ? 'bg-brand-gradient h-20' : 'bg-brand-gradient h-[90px]'
       )}
     >
       <div className="flex justify-between items-center w-10/12 max-w-container px-[15px] text-white">
         {/* Logo */}
         <div className="flex gap-3 items-center">
-          <Image src={Logo} width={25} height={25} alt="Brand-Logo" />
-          <h2 className="text-4xl font-semibold">Smart</h2>
+          <Image src="/logo-white-icon.png" width={40} height={40} alt="Brand-Logo" className='mix-blend-screen' />
+          <h2 className="text-4xl font-semibold">YieldTap</h2>
         </div>
 
         {/* Desktop Links */}
