@@ -57,7 +57,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex gap-3 items-center">
           <Image src="/logo-white-icon.png" width={40} height={40} alt="Brand-Logo" className='mix-blend-screen' />
-          <h2 className="text-4xl font-semibold">YieldTap</h2>
+          <h2 className="hidden sm:block text-2xl md:text-3xl lg:text-4xl font-semibold">YieldTap</h2>
         </div>
 
         {/* Desktop Links */}
@@ -112,7 +112,7 @@ const Navbar = () => {
         )}
       >
         <div className="flex justify-between items-center px-6 py-4 border-b border-gray-700">
-          <Image src={Logo} width={25} height={25} alt="Brand-Logo" />
+          <Image src="/logo-white-icon.png" width={40} height={40} alt="Brand-Logo" className='mix-blend-screen' />
           <button onClick={() => setIsMenuOpen(false)}>
             <FontAwesomeIcon icon={faTimes} size="lg" />
           </button>
