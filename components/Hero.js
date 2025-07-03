@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="flex flex-col w-full md:w-1/2 h-full justify-center gap-10 items-center md:items-start text-white">
 
                 {/* Brand Name and Slogan */}
-                <div className="flex flex-col gap-1 items-center md:items-start text-center md:text-start">
+                <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-start">
                     <h1 className="text-5xl md:text-7xl lg:text-9xl  font-semibold">YieldTap</h1>
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium">Track & Maximize Your DeFi Yields</h2>
                 </div>
@@ -20,7 +20,7 @@ const Hero = () => {
                 <div className="md:text-lg text-balance text-center md:text-start"><span className='font-semibold text-lg md:text-xl'>YieldTap</span> gives you real-time insights across all your DeFi investments — effortlessly manage, compare, and grow your yields from one sleek dashboard.</div>
 
                 {/* Download Buttons */}
-                <div className="flex flex-wrap gap-5 md:w-10/12">
+                <div className="flex flex-wrap gap-5 items-center justify-center md:w-10/12">
                     <div className="flex justify-center items-center py-4 px-12 bg-brand-button-gradient rounded-full text-sm font-semibold shadow-2xl/60">Download</div>
                     <div className="flex justify-center items-center py-4 px-12 inset-ring-1 rounded-full text-sm font-semibold">Learn More</div>
 
